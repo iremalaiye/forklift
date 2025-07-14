@@ -1,0 +1,48 @@
+<header class="site-navbar" role="banner">
+    <div class="site-navbar-top">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+
+                </div>
+
+                <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
+                    <div class="site-logo">
+                        <a href="{{route('anasayfa')}}" class="js-logo-clone">{{config('app.name')}}</a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-6 col-md-4 order-3 order-md-3 text-right">
+                    <div class="site-top-icons">
+                        <ul>
+                            <span class="icon icon-phone"></span><li>+90 543 722 16 44</li><br>
+                            <span class="icon icon-phone"></span><li>+90 540 313 43 43</li>
+
+                            <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <nav class="site-navigation text-right text-md-center" role="navigation">
+        <div class="container">
+            <ul class="site-menu js-clone-nav d-none d-md-block">
+                <li class="active"><a href="{{route('anasayfa')}}">Anasayfa</a></li>
+
+                <li >
+                    <a href="{{route('hakkimizda')}}">Hakkımızda</a>
+
+                </li>
+                <li><a href="{{route('urunler')}}">Ürünler</a></li>
+
+                <li><a href="{{route('iletisim')}}">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
