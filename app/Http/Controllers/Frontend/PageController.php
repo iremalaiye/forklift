@@ -8,11 +8,13 @@ use App\Models\Product;
 class PageController extends Controller
 {
     public function urunler(){
-         $products=Product::where('status','1')->get();
+         $products=Product::where('status','1')->paginate(1);
         return view('frontend.pages.products',compact('products'));
     }
-    public function urundetay(){
-        return view('frontend.pages.product');
+    public function urundetay($slug){
+
+       $product=Product::whereSlug($slug)->first();
+        return view('frontend.pages.product',compact('product'));
     }
     public function hakkimizda(){
      $about =About::where('id',1)->first();
