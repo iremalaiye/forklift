@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'subscribed' => EnsureUserIsSubscribed::class,
              'sitesetting' => \App\Http\Middleware\SiteSettingMiddleware::class,
+            'panelsetting' => \App\Http\Middleware\PanelSettingMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
