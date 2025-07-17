@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\PageController;
 
 require __DIR__.'/panel.php';
-
 Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/', [PageHomeController::class,'anasayfa'] )->name('anasayfa');
 
