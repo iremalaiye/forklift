@@ -4,7 +4,7 @@ use App\Http\Controllers\Backend\DashboardController;
 
 
 
-Route::group(['middleware' => 'panelsetting','prefix'=>'panel'], function () {
-    Route::get('/', [DashboardController::class,'index'] )->name('panel');
+Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'panel.'], function () {
+    Route::get('/', [DashboardController::class,'index'] )->name('index');
 });
 
