@@ -8,7 +8,7 @@ use App\Models\Product;
 class PageController extends Controller
 {
     public function urunler(){
-         $products=Product::where('status','1')->paginate(1);
+         $products=Product::where('status','1')->paginate(10);
         return view('frontend.pages.products',compact('products'));
     }
     public function urundetay($slug){

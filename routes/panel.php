@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\SliderController;
-
+use App\Http\Controllers\Backend\ProductController;
 
 Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'panel.'], function () {
     Route::get('/', [DashboardController::class,'index'] )->name('index');
@@ -13,5 +13,14 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
     Route::post('/slider/store', [SliderController::class,'store'] )->name('slider.store');
     Route::put('/slider/{id}/update', [SliderController::class,'update'] )->name('slider.update');
     Route::delete('/slider/{id}/destroy', [SliderController::class,'destroy'] )->name('slider.destroy');
+
+
+
+    Route::resource('products', ProductController::class);
+
+
+
+
+
 });
 

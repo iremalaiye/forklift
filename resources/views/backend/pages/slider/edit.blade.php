@@ -4,7 +4,7 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Slider</h4>
+                    <h4 class="card-title">Anasayfa</h4>
 
             @if($errors)
             @foreach($errors->all() as $error)
@@ -14,8 +14,6 @@
 
             @endforeach
              @endif
-
-
 
                     @if(session()->get('success'))
                         <div class="alert alert-success">
@@ -61,7 +59,7 @@
                             <label>Resim</label>
                             <input type="file" name="image" class="file-upload-default">
                             <div class="input-group col-xs-12">
-                                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                                <input type="text" class="form-control file-upload-info" disabled placeholder="Resim yükle">
                                 <span class="input-group-append">
                           <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
                         </span>
@@ -69,7 +67,7 @@
                         </div>
                         <div class="form-group">
                             <label for="name">Başlık</label>
-                            <input type="text" class="form-control" id="name" name ="name" value="{{$slider->name ?? ''}}"placeholder="Slider Başlık">
+                            <input type="text" class="form-control" id="name" name ="name" value="{{$slider->name ?? ''}}"placeholder="Anasayfa Başlık">
                         </div>
 
                         <div class="form-group">
@@ -79,7 +77,7 @@
 
                         <div class="form-group">
                             <label for="link">link</label>
-                            <input type ="text" class="form-control" id="link" name ="link" value="{{$slider->link ?? ''}}"placeholder="Slider link">
+                            <input type ="text" class="form-control" id="link" name ="link" value="{{$slider->link ?? ''}}"placeholder="Anasayfa Link">
                         </div>
 
 
