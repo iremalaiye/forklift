@@ -22,6 +22,8 @@ Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/register', [CustomAuthController::class,'register'] )->name('register');
     Route::get('/cikis', [AjaxController::class,'logout'] )->name('cikis');
 
+
+
 });
 
 

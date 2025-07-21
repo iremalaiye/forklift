@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\AboutController;
 
 Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'panel.'], function () {
     Route::get('/', [DashboardController::class,'index'] )->name('index');
@@ -17,6 +18,14 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
 
 
     Route::resource('products', ProductController::class);
+
+
+    Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+    Route::get('/about/{id}/edit', [AboutController::class, 'edit'])->name('about.edit');
+    Route::put('/about/{id}', [AboutController::class, 'update'])->name('about.update');
+
+
+
 
 
 
