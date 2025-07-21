@@ -24,6 +24,7 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
     Route::get('/about/{id}/edit', [AboutController::class, 'edit'])->name('about.edit');
     Route::put('/about/{id}', [AboutController::class, 'update'])->name('about.update');
 
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 
 

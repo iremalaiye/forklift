@@ -14,8 +14,9 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $products = Product::paginate(10); // veya all() da olabilir
-        return view('backend.pages.index', compact('products'));
+        $latestProducts = Product::latest()->take(5)->get();
+
+        return view('backend.pages.index', compact('latestProducts'));
     }
 
 
