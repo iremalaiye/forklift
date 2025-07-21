@@ -9,7 +9,7 @@
                     <div class="intro-text text-center text-md-left">
                         <p class="mb-4">{{$slider->content??''}} </p>
                         <p>
-                            <a href="{{url('/').'/'.$slider->link}}" class="btn btn-sm btn-primary">Ürünlerimiz</a>
+                            <a href="{{url('/').'/'.$slider->link}}" class="btn btn-sm btn-primary">Hizmetlerimiz</a>
                         </p>
                     </div>
                 </div>
@@ -54,81 +54,42 @@
 
 
 
+
+
+
     <div class="site-section block-3 site-blocks-2 bg-light">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 site-section-heading text-center pt-4">
-                    <h2>Yeni Eklenen Ürünlerimiz</h2>
+                    <h2>Hizmetlerimiz</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="nonloop-block-3 owl-carousel">
-                        <div class="item">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src="images/cloth_1.jpg" alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3><a href="#" class="text-danger">Tank Top</a></h3>
-                                    <p class="mb-0">Finding perfect t-shirt</p>
-                                    <p class="text-danger font-weight-bold">$50</p>
+
+                        @foreach($products as $product)
+                            <div class="item">
+                                <div class="block-4 text-center">
+                                    <figure class="block-4-image">
+                                        <img src="{{ asset($product->image) }}" alt="{{ $product->model }}" class="img-fluid" style="height: 300px; object-fit: cover;">
+                                    </figure>
+                                    <div class="block-4-text p-4">
+                                        <h3><a href="{{ route('urundetay', $product->slug) }}" class="text-danger">{{ $product->model }}</a></h3>
+                                        <p class="text-danger font-weight-bold">{{ $product->capacity }}</p>
+                                        <p class="mb-0">{{ \Illuminate\Support\Str::limit($product->description, 60) }}</p>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src="images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3><a href="#" class="text-danger">Corater</a></h3>
-                                    <p class="mb-0">Finding perfect products</p>
-                                    <p class="text-danger font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src="images/cloth_2.jpg" alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3><a href="#" class="text-danger">Polo Shirt</a></h3>
-                                    <p class="mb-0">Finding perfect products</p>
-                                    <p class="text-danger font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src="images/cloth_3.jpg" alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3><a href="#" class="text-danger">T-Shirt Mockup</a></h3>
-                                    <p class="mb-0">Finding perfect products</p>
-                                    <p class="text-danger font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src="images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3><a href="#" class="text-danger">Corater</a></h3>
-                                    <p class="mb-0">Finding perfect products</p>
-                                    <p class="text-danger font-weight-bold">$50</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 

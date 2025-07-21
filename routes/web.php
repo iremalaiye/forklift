@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\PageController;
 use \App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\AjaxController;
 
+
 require __DIR__.'/panel.php';
 Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/', [PageHomeController::class,'anasayfa'] )->name('anasayfa');
@@ -22,7 +23,7 @@ Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/register', [CustomAuthController::class,'register'] )->name('register');
     Route::get('/cikis', [AjaxController::class,'logout'] )->name('cikis');
 
-
+    Route::get('/urun/{slug}', [PageController::class,'urundetay'] )->name('urundetay');
 
 });
 

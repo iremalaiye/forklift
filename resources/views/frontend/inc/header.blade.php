@@ -18,8 +18,8 @@
                 <div class="col-6 col-md-4 order-3 order-md-3 text-right">
                     <div class="site-top-icons">
                         <ul>
-                            <span class="icon icon-phone"></span><li>+90 543 722 16 44</li><br>
-                            <span class="icon icon-phone"></span><li>+90 540 313 43 43</li>
+                            <span class="icon icon-phone "></span> <li> +90 543 722 16 44</li><br>
+                            <span class="icon icon-phone "></span> <li> +90 540 313 43 43</li>
 
                             <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
                         </ul>
@@ -38,7 +38,7 @@
                     <a href="{{route('hakkimizda')}}">Hakkımızda</a>
 
                 </li>
-                <li><a href="{{route('urunler')}}">Ürünler</a></li>
+                <li><a href="{{route('urunler')}}">Hizmetlerimiz</a></li>
 
                 <li><a href="{{route('iletisim')}}">İletişim</a></li>
             </ul>

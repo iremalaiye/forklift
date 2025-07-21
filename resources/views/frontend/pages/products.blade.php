@@ -8,7 +8,7 @@
         <div class="bg-light py-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 mb-0"><a href="{{route('anasayfa')}}">Anasayfa</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Ürünler</strong></div>
+                    <div class="col-md-12 mb-0"><a href="{{route('anasayfa')}}">Anasayfa</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Hizmetlerimiz</strong></div>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
 
                         <div class="row">
                             <div class="col-md-12 mb-5">
-                                <div class="float-md-left mb-4"><h2 class="text-black h5">Ürünlerimiz</h2></div>
+                                <div class="float-md-left mb-4"><h2 class="text-black h5">Hizmetlerimiz</h2></div>
 
                         </div>
                         <div class="row mb-5">
@@ -69,4 +69,30 @@
 
             </div>
         </div>
+            <style>
+                .block-4 {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .block-4-image {
+                    flex-shrink: 0;
+                }
+
+                .block-4-text {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 1rem;
+                }
+
+                .block-4-image img {
+                    height: 250px;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            </style>
+
 @endsection
