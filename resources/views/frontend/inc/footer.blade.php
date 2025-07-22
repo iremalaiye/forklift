@@ -20,6 +20,8 @@
                 </div>
             </div>
 
+
+
             <div class="col-md-6 col-lg-3">
                 <div class="block-5 mb-5">
                     <h3 class="footer-heading mb-4">İletişim</h3>

@@ -64,29 +64,30 @@
                     <h2>Hizmetlerimiz</h2>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="nonloop-block-3 owl-carousel">
-
                         @foreach($products as $product)
                             <div class="item">
-                                <div class="block-4 text-center">
-                                    <figure class="block-4-image">
-                                        <img src="{{ asset($product->image) }}" alt="{{ $product->model }}" class="img-fluid" style="height: 300px; object-fit: cover;">
-                                    </figure>
-                                    <div class="block-4-text p-4">
-                                        <h3><a href="{{ route('urundetay', $product->slug) }}" class="text-danger">{{ $product->model }}</a></h3>
-                                        <p class="text-danger font-weight-bold">{{ $product->capacity }}</p>
-                                        <p class="mb-0">{{ \Illuminate\Support\Str::limit($product->description, 60) }}</p>
-
+                                <a href="{{ route('urundetay', $product->slug) }}" class="text-decoration-none text-dark">
+                                    <div class="block-4 text-center shadow-sm" style="transition: 0.3s;">
+                                        <figure class="block-4-image mb-0">
+                                            <img src="{{ asset($product->image) }}" alt="{{ $product->model }}" class="img-fluid" style="height: 300px; object-fit: cover;">
+                                        </figure>
+                                        <div class="block-4-text p-4">
+                                            <h3 class="text-danger">{{ $product->model }}</h3>
+                                            <p class="text-danger font-weight-bold">{{ $product->capacity }}</p>
+                                            <p class="mb-0">{{ \Illuminate\Support\Str::limit($product->description, 60) }}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 

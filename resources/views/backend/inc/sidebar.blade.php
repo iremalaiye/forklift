@@ -15,7 +15,7 @@
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{route('panel.slider.index')}}">Anasayfa İçeriği</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('panel.slider.create')}}">Anasayfa İçeriği Ekle</a></li>
+
 
                 </ul>
             </div>
@@ -45,7 +45,7 @@
             <div class="collapse" id="products">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('panel.products.index') }}">Ürün Listesi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('panel.products.create') }}">Yeni Ürün Ekle</a></li>
+
                 </ul>
             </div>
         </li>

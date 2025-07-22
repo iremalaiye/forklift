@@ -110,7 +110,8 @@ class ProductController extends Controller
             'image' => isset($dosyaadi) ? 'img/products/' . $dosyaadi : $product->image,
         ]);
 
-        return back()->withSuccess('Ürün başarıyla güncellendi!');
+
+        return redirect()->route('panel.products.index')->with('success', 'Ürün başarıyla güncellendi!');
     }
     /**
      * Remove the specified resource from storage.

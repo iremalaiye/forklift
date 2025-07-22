@@ -4,7 +4,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Anasayfa Düzeni</h4>
+                    <h4 class="card-title">Anasayfa İçeriği </h4>
                     <p class="card-description">
                         <a href="{{route('panel.slider.create')}}" class="btn btn-primary">Yeni</a>
                     </p>
@@ -23,8 +23,8 @@
                                 <th>Başlık</th>
                                 <th>Slogan</th>
                                 <th>Link</th>
-                                <th>Status</th>
-                                <th>edit</th>
+                                <th>Durum</th>
+                                <th>Düzenle</th>
 
                             </tr>
                             </thead>
@@ -39,12 +39,12 @@
             <td>{{($slider->content?? '')}}</td>
             <td>{{($slider->link)}}</td>
             <td><label class="badge badge-{{$slider->status=='1'? 'success' :'danger'}}">{{$slider->status=='1'? 'aktif' :'pasif'}}</label></td>
-            <td> <a href="{{route('panel.slider.edit',$slider->id)}}" class="btn btn-primary mr-2">Düzenle</a></td>
+            <td> <a href="{{route('panel.slider.edit',$slider->id)}}" class="btn btn-sm btn-warning mr-2">Düzenle</a></td>
             <td class="d-flex">
                 <form action="{{route('panel.slider.destroy',$slider->id)}} " method="POST">
                     @csrf
                 @method('DELETE')
-                 <button type="submit" class="btn btn-danger">Sil</button>
+                 <button type="submit" class="btn btn-sm btn-danger">Sil</button>
             </form>
             </td>
         </tr>

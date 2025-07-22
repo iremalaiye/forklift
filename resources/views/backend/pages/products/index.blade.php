@@ -22,7 +22,6 @@
                             <tr>
                                 <th>Resim</th>
                                 <th>Model</th>
-                                <th>Slug</th>
                                 <th>Kapasite</th>
                                 <th>Açıklama</th>
                                 <th>Durum</th>
@@ -37,7 +36,7 @@
                                             <img src="{{ asset($product->image ?? 'img/resimyok.webp') }}" alt="Ürün Resmi" width="100">
                                         </td>
                                         <td>{{ $product->model }}</td>
-                                        <td>{{ $product->slug }}</td>
+
                                         <td>{{ $product->capacity }}</td>
                                         <td>{{ Str::limit($product->description, 50) }}</td>
                                         <td>

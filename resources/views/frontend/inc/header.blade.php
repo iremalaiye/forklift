@@ -4,11 +4,16 @@
             <div class="row align-items-center">
 
                 <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
+
+
+                    <a href="{{route('anasayfa')}}">
                         <img src="{{ asset('images/icon1.ico') }}" alt="Logo" style="height: 60px;">
+                    </a>
                 </div>
                 <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
                     <div class="site-logo">
                         <a href="{{route('anasayfa')}}" class="js-logo-clone">{{config('app.name')}}</a>
+
                     </div>
                 </div>
 
@@ -18,13 +23,14 @@
                 <div class="col-6 col-md-4 order-3 order-md-3 text-right">
                     <div class="site-top-icons">
                         <ul>
-                            <span class="icon icon-phone "></span> <li> +90 543 722 16 44</li><br>
-                            <span class="icon icon-phone "></span> <li> +90 540 313 43 43</li>
+                            <span class="icon icon-phone mr-2 text-danger "></span> <li class="text-dark font-weight-bold"> +90 543 722 16 44 | +90 540 313 43 43</li><br>
 
                             <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
                         </ul>
                     </div>
                 </div>
+
+
 
             </div>
         </div>
