@@ -28,7 +28,7 @@
                         <h2 class="text-black">{{$about->name}}</h2>
                     </div>
                     <p>{!! $about->content !!}</p>
-                    <p>Accusantium dolor ratione maiores est deleniti nihil? Dignissimos est, sunt nulla illum autem in, quibusdam cumque recusandae, laudantium minima repellendus.</p>
+
 
                 </div>
             </div>

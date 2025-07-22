@@ -35,7 +35,7 @@
                         {{-- Existing Image --}}
                         @if(isset($product) && $product->image)
                             <div class="form-group">
-                                <label>Mevcut Resim</label><br>
+
                                 <img src="{{ asset($product->image) }}" alt="Ürün Resmi" width="400" height="300">
                             </div>
                         @endif

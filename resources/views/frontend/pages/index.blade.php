@@ -3,13 +3,14 @@
 
     <div class="site-blocks-cover" style="background-image: url({{asset($slider->image)}});" data-aos="fade">
         <div class="container">
+            <div style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
             <div class="row align-items-start align-items-md-center justify-content-end">
                 <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-                    <h1 class="mb-2">{{$slider->name??__('Merhaba')}}</h1>
+                    <h1 class="mb-2 text-white">{{$slider->name??__('Merhaba')}}</h1>
                     <div class="intro-text text-center text-md-left">
-                        <p class="mb-4">{{$slider->content??''}} </p>
+                        <p class="mb-4 text-white">{{$slider->content??''}} </p>
                         <p>
-                            <a href="{{url('/').'/'.$slider->link}}" class="btn btn-sm btn-primary">Hizmetlerimiz</a>
+                            <a href="{{url('/').'/'.$slider->link}}" class="btn btn-sm btn-warning">Hizmetlerimiz</a>
                         </p>
                     </div>
                 </div>
@@ -21,8 +22,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="">
-                    <div class="icon mr-4 align-self-start">
-                        <span class="{{$about->text_1_icon}}"></span>
+                    <div class="icon mr-4 align-self-start" >
+                        <span class="{{$about->text_1_icon}}" ></span>
                     </div>
                     <div class="text">
                         <h2 class="text-uppercase">{{$about->text_1}}</h2>
@@ -31,7 +32,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon mr-4 align-self-start">
-                        <span class="{{$about->text_2_icon}}"></span>
+                        <span class="{{$about->text_2_icon}}" ></span>
                     </div>
                     <div class="text">
                         <h2 class="text-uppercase">{{$about->text_2}}</h2>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="icon mr-4 align-self-start">
-                        <span class="{{$about->text_3_icon}}"></span>
+                        <span class="{{$about->text_3_icon}}" ></span>
                     </div>
                     <div class="text">
                         <h2 class="text-uppercase">{{$about->text_3}}</h2>

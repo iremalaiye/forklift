@@ -4,7 +4,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\AboutController;
-
+use App\Http\Controllers\ContactController;
 Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'panel.'], function () {
     Route::get('/', [DashboardController::class,'index'] )->name('index');
 
@@ -25,6 +25,12 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
     Route::put('/about/{id}', [AboutController::class, 'update'])->name('about.update');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+
+
+    Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+    Route::get('/contacts/{id}', [ContactController::class, 'show'])->name('contacts.show');
+    Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
 
 

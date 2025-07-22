@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\PageController;
 use \App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\AjaxController;
-
+use App\Http\Controllers\ContactController;
 
 require __DIR__.'/panel.php';
 Route::group(['middleware' => 'sitesetting'], function () {
@@ -24,6 +24,7 @@ Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/cikis', [AjaxController::class,'logout'] )->name('cikis');
 
     Route::get('/urun/{slug}', [PageController::class,'urundetay'] )->name('urundetay');
+    Route::post('/iletisim/gonder', [ContactController::class, 'store'])->name('iletisim.gonder');
 
 });
 

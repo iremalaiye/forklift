@@ -16,6 +16,12 @@
 
         <ul class="navbar-nav navbar-nav-right">
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('panel.contacts.index') }}" title="Mesajlar">
+                    <i class="ti-email"></i>
+                </a>
+            </li>
+
 
             <li class="nav-item nav-settings d-none d-lg-flex">
                 <a class="nav-link" href="#">

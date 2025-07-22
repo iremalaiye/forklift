@@ -12,20 +12,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="h3 mb-3 text-black">Get In Touch</h2>
+                    <h2 class="h3 mb-3 text-black">İletişim</h2>
                 </div>
                 <div class="col-md-7">
 
-                    <form action="#" method="post">
+                    <form action="{{ route('iletisim.gonder') }}" method="POST">
+                        @csrf
 
                         <div class="p-3 p-lg-5 border">
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                                    <label for="c_fname" class="text-black">İsim <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="c_fname" name="c_fname">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                                    <label for="c_lname" class="text-black">Soyisim <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="c_lname" name="c_lname">
                                 </div>
                             </div>
@@ -37,38 +38,43 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="c_subject" class="text-black">Subject </label>
+                                    <label for="c_subject" class="text-black">Konu</label>
                                     <input type="text" class="form-control" id="c_subject" name="c_subject">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="c_message" class="text-black">Message </label>
+                                    <label for="c_message" class="text-black">Mesaj</label>
                                     <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-lg-12">
-                                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message">
+                                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Mesaj Gönder">
                                 </div>
                             </div>
                         </div>
                     </form>
+
+
                 </div>
                 <div class="col-md-5 ml-auto">
                     <div class="p-4 border mb-3">
-                        <span class="d-block text-primary h6 text-uppercase">New York</span>
-                        <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <span class="d-block text-primary h6 text-uppercase">Kütahya</span>
+                        <p class="mb-0">Kütahya,Türkiye</p>
+                        <iframe
+                            class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48987.880850056825!2d29.950103508509627!3d39.42394499272082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409da4a7d804fbf9%3A0x5633dd1f4c10f1c3!2zS8O8dGFoeWE!5e0!3m2!1str!2str!4v1624905641234!5m2!1str!2str"
+                            width="100%"
+                            height="250"
+                            style="border:0 ; border-radius: 15px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-                    <div class="p-4 border mb-3">
-                        <span class="d-block text-primary h6 text-uppercase">London</span>
-                        <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
-                    </div>
-                    <div class="p-4 border mb-3">
-                        <span class="d-block text-primary h6 text-uppercase">Canada</span>
-                        <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
-                    </div>
+
 
                 </div>
             </div>

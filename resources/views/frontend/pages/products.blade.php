@@ -24,14 +24,14 @@
                                 <div class="float-md-left mb-4"><h2 class="text-black h5">Hizmetlerimiz</h2></div>
 
                         </div>
-                        <div class="row mb-5">
+                        <div class="row mb-5" >
 @if(!empty($products)&& $products->count()>0)
      @foreach($products as $product)
 
                                         <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                                             <div class="block-4 text-center border">
                                                 <figure class="block-4-image">
-                                                    <a href="{{route('urundetay',$product->slug)}}"><img src="{{asset($product->image)}}" alt="Image placeholder" class="img-fluid"></a>
+                                                    <a href="{{route('urundetay',$product->slug)}}"><img src="{{asset($product->image)}}" alt="Image placeholder" class="img-fluid rounded"></a>
                                                 </figure>
                                                 <div class="block-4-text p-4">
                                                     <h3><a href="{{route('urundetay',$product->slug)}}">{{($product->model)}}</a></h3>

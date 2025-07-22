@@ -29,12 +29,7 @@
         </li>
 
 
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <i class= "icon-grid menu-icon"> </i>
-                <span class="menu-title">İletişim</span>
-            </a>
-        </li>
+
 
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false" aria-controls="products">
