@@ -110,4 +110,6 @@ class SliderController extends Controller
 
         return back()->withSuccess('Başarıyla silindi!!');
     }
+
+
 }

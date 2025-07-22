@@ -38,5 +38,7 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
 
 
 
+
+
 });
 

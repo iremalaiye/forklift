@@ -26,6 +26,7 @@ Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/urun/{slug}', [PageController::class,'urundetay'] )->name('urundetay');
     Route::post('/iletisim/gonder', [ContactController::class, 'store'])->name('iletisim.gonder');
 
+
 });
 
 

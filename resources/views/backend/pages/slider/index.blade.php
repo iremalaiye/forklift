@@ -38,7 +38,16 @@
             <td>{{($slider->name)}}</td>
             <td>{{($slider->content?? '')}}</td>
             <td>{{($slider->link)}}</td>
-            <td><label class="badge badge-{{$slider->status=='1'? 'success' :'danger'}}">{{$slider->status=='1'? 'aktif' :'pasif'}}</label></td>
+
+            <td>
+                <div class="checkbox" item-id="{{$slider->id}}">
+                    <label>
+                        <input type="checkbox" class="durum " data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger" {{$slider->status=='1'? 'checked' :''}} data-toggle="toggle">
+
+                    </label>
+                </div>
+
+            </td>
             <td> <a href="{{route('panel.slider.edit',$slider->id)}}" class="btn btn-sm btn-warning mr-2">Düzenle</a></td>
             <td class="d-flex">
                 <form action="{{route('panel.slider.destroy',$slider->id)}} " method="POST">

@@ -18,6 +18,10 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('backend')}}/css/vertical-layout-light/style.css">
+
+    <link href="{{asset('backend/css/bootstrap-toggle.min.css')}} " rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/bootstrap.min.css"/>
+
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -93,6 +97,8 @@
 
 <script src="{{asset('backend')}}/js/file-upload.js"></script>
 
+<script src="{{asset('backend/js/bootstrap-toggle.min.js')}}"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
 <!-- End custom js for this page-->
 </body>
 
