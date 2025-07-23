@@ -52,11 +52,9 @@
                 </div>
             </div>
         </div>
-        <div id="right-sidebar" class="settings-panel">
-            <i class="settings-close ti-close"></i>
 
 
-        </div>
+
         <!-- partial -->
         <!-- partial:partials/_sidebar.html -->
 @include('backend.inc.sidebar')

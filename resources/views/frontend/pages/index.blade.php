@@ -72,7 +72,7 @@
                         @foreach($products as $product)
                             <div class="item">
                                 <a href="{{ route('urundetay', $product->slug) }}" class="text-decoration-none text-dark">
-                                    <div class="block-4 text-center shadow-sm" style="transition: 0.3s;">
+                                    <div class="block-4 text-center shadow-sm" style="height:500px;transition: 0.3s;">
                                         <figure class="block-4-image mb-0">
                                             <img src="{{ asset($product->image??"") }}" alt="{{ $product->model }}" class="img-fluid" style="height: 300px; object-fit: cover;">
                                         </figure>

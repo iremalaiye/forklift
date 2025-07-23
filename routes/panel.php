@@ -17,6 +17,7 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
 
     Route::post('/slider-durum/update', [SliderController::class,'status'] )->name('slider.status');
     Route::post('/product-durum /update', [ProductController::class,'status'] )->name('product.status');
+    Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
     Route::resource('products', ProductController::class);
 
