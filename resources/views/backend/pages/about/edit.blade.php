@@ -29,7 +29,7 @@
 
                         {{-- Image--}}
                         <div class="form-group">
-                            <label>Mevcut Görsel</label>
+                            <label>Mevcut Görsel: </label>
                             <div class="input-group col-xs-12 mb-2">
                                 @if($about->image)
                                     <img src="{{ asset($about->image) }}" width="300" height="200" class="img-fluid">

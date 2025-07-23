@@ -2,6 +2,32 @@
 
 @section('content')
     <div class="row">
+        <style>
+            .form-group.position-relative {
+                position: relative;
+            }
+            .image-overlay {
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 18px;
+                opacity: 0;
+                border-radius: 4px;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                user-select: none;
+            }
+            .form-group.position-relative:hover .image-overlay {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        </style>
+
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -34,23 +60,23 @@
 
                         {{-- Existing Image --}}
                         @if(isset($product) && $product->image)
-                            <div class="form-group">
+                            <div class="form-group position-relative" style="display: inline-block; cursor: pointer; width: 400px; height: 300px;">
+                                <img id="clickable-image" src="{{ asset($product->image) }}" alt="Ürün Resmi" width="400" height="300" style="display: block; border-radius: 4px;">
 
-                                <img src="{{ asset($product->image) }}" alt="Ürün Resmi" width="400" height="300">
+                                <div class="image-overlay">
+                                    Değiştir
+                                </div>
+
+                                <input type="file" name="image" class="file-upload-default" id="imageInput" style="display: none;">
+                            </div>
+                        @else
+                            {{-- Yeni ürün için normal dosya inputu --}}
+                            <div class="form-group">
+                                <label for="image">Resim Yükle</label>
+                                <input type="file" name="image" id="imageInput" class="form-control" required>
                             </div>
                         @endif
 
-                        {{-- Image Upload --}}
-                        <div class="form-group">
-                            <label>Resim</label>
-                            <input type="file" name="image" class="file-upload-default">
-                            <div class="input-group col-xs-12">
-                                <input type="text" class="form-control file-upload-info" disabled placeholder="Resim yükle">
-                                <span class="input-group-append">
-                                <button class="file-upload-browse btn btn-primary" type="button">Gözat</button>
-                            </span>
-                            </div>
-                        </div>
 
                         {{-- Model --}}
                         <div class="form-group">
@@ -88,4 +114,32 @@
             </div>
         </div>
     </div>
+@endsection
+@section('customjs')
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const image = document.getElementById("clickable-image");
+            const overlay = document.querySelector(".image-overlay");
+            const input = document.getElementById("imageInput");
+
+            if (input) {
+                if (image) {
+                    image.addEventListener("click", () => input.click());
+                }
+                if (overlay) {
+                    overlay.addEventListener("click", () => input.click());
+                }
+
+                input.addEventListener("change", () => {
+                    const fileName = input.files[0]?.name;
+                    if (fileName) {
+                        const displayInput = document.querySelector(".file-upload-info");
+                        if (displayInput) displayInput.value = fileName;
+                    }
+                });
+            }
+        });
+
+
+    </script>
 @endsection
