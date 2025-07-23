@@ -51,8 +51,8 @@ class SliderController extends Controller
               'status'=>$request->status,
             'image'=> isset($dosyaadi) ? 'img/slider/' . $dosyaadi : null,]
         );
-        return back()->withSuccess('Başarıyla oluşturuldu!');
 
+        return redirect()->route('panel.slider.index')->with('success', 'Anasayfa başarıyla oluşturuldu!');
     }
 
     /**

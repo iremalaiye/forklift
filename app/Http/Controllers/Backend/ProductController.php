@@ -56,7 +56,8 @@ class ProductController extends Controller
             'image' => isset($dosyaadi) ? 'img/products/' . $dosyaadi : null,
         ]);
 
-        return back()->withSuccess('Ürün başarıyla eklendi!');
+
+        return redirect()->route('panel.products.index')->with('success', 'Ürün başarıyla eklendi');
     }
 
     /**
