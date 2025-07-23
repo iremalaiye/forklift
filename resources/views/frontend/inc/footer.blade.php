@@ -4,7 +4,7 @@
 
 
 
-            <!-- Menü -->
+            <!-- Menu -->
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h3 class="footer-heading mb-4">Menü</h3>
 
@@ -16,7 +16,7 @@
                 </ul>
             </div>
 
-            <!-- İletişim -->
+            <!-- Contact-->
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="block-5 mb-5">
                 <h3 class="footer-heading mb-4">İletişim</h3>
@@ -47,7 +47,7 @@
 
 
 
-        <!-- Footer Alt Bilgi -->
+        <!-- Footer -->
         <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
                 <p>

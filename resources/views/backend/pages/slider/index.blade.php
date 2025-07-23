@@ -73,3 +73,40 @@
     </div>
 
 @endsection
+
+
+@section('customjs')
+    <script>
+
+        $(document).on('change', '.durum', function(e) {
+
+            id = $(this).closest('.checkbox').attr('item-id');
+            statu = $(this).prop('checked');
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type:"POST",
+                url:"{{route('panel.slider.status')}}",
+                data:{
+                    id:id,
+                    statu:statu
+                },
+                success: function (response) {
+                    if (response.status=="1")
+                    {
+                        alertify.success("Durum Aktif Edildi");
+                    } else {
+                        alertify.error("Durum Pasif Edildi");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Hatası:", xhr.responseText);
+                }
+            });
+        });
+
+
+
+    </script>
+@endsection

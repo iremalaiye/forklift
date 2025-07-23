@@ -111,5 +111,17 @@ class SliderController extends Controller
         return back()->withSuccess('Başarıyla silindi!!');
     }
 
+    public function status(Request $request)
+    {
+
+        $update = filter_var($request->statu, FILTER_VALIDATE_BOOLEAN);
+        $updateString = $update ? '1' : '0';
+
+        Slider::where('id', $request->id)->update(['status' => $updateString]);
+
+        return response(['error' => false, 'status' => $updateString]);
+    }
+
+
 
 }
