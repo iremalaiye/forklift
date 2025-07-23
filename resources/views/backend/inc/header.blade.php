@@ -29,7 +29,8 @@
                     <button type="submit" class="btn btn-link nav-link" style="padding: 0; border: none; background: none;">
                         <i class="ti-power-off"></i>
                     </button>
-
+                </form>
+            </li>
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="icon-menu"></span>
