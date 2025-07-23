@@ -16,6 +16,7 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
     Route::delete('/slider/{id}/destroy', [SliderController::class,'destroy'] )->name('slider.destroy');
 
     Route::post('/slider-durum/update', [SliderController::class,'status'] )->name('slider.status');
+    Route::post('/product-durum /update', [ProductController::class,'status'] )->name('product.status');
 
     Route::resource('products', ProductController::class);
 

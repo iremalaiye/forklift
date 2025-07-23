@@ -128,4 +128,15 @@ class ProductController extends Controller
 
         return back()->withSuccess('Ürün başarıyla silindi!');
     }
+    public function status(Request $request)
+    {
+
+        $update = filter_var($request->statu, FILTER_VALIDATE_BOOLEAN);
+        $updateString = $update ? '1' : '0';
+
+        Product::where('id', $request->id)->update(['status' => $updateString]);
+
+        return response(['error' => false, 'status' => $updateString]);
+    }
+
 }

@@ -40,9 +40,14 @@
                                         <td>{{ $product->capacity }}</td>
                                         <td>{{ Str::limit($product->description, 50) }}</td>
                                         <td>
-                                            <label class="badge badge-{{ $product->status == 1 ? 'success' : 'danger' }}">
-                                                {{ $product->status == 1 ? 'Aktif' : 'Pasif' }}
-                                            </label>
+
+                                            <div class="checkbox" item-id="{{$product->id}}">
+                                                <label>
+                                                    <input type="checkbox" class="durum " data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger" {{$product->status=='1'? 'checked' :''}} data-toggle="toggle">
+
+                                                </label>
+                                            </div>
+
                                         </td>
                                         <td class="d-flex">
                                             <a href="{{ route('panel.products.edit', $product->id) }}" class="btn btn-sm btn-warning mr-2">Düzenle</a>
@@ -67,4 +72,41 @@
             </div>
         </div>
     </div>
+@endsection
+
+
+@section('customjs')
+    <script>
+
+        $(document).on('change', '.durum', function(e) {
+
+            id = $(this).closest('.checkbox').attr('item-id');
+            statu = $(this).prop('checked');
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type:"POST",
+                url:"{{route('panel.product.status')}}",
+                data:{
+                    id:id,
+                    statu:statu
+                },
+                success: function (response) {
+                    if (response.status=="1")
+                    {
+                        alertify.success("Durum Aktif Edildi");
+                    } else {
+                        alertify.error("Durum Pasif Edildi");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Hatası:", xhr.responseText);
+                }
+            });
+        });
+
+
+
+    </script>
 @endsection
