@@ -18,8 +18,8 @@
     <div class="row">
         @foreach($latestProducts as $product)
             <div class="col-md-4 mb-4">
-                <a href="{{ route('panel.products.edit', $product->id) }}" class="text-decoration-none text-dark">
-                    <div class="card h-100 shadow-sm">
+                <a href="{{ route('panel.products.edit', $product->id) }}" class="text-decoration-none ">
+                    <div class="card h-100 shadow-sm" >
                         <img src="{{ asset($product->image) }}" class="card-img-top" alt="{{ $product->name }}" style="height: 200px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">{{ $product->model }}</h5>

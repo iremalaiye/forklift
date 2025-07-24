@@ -36,16 +36,18 @@
                 <img src="{{asset($slider->image)}}" alt="image"/>
             </td>
             <td>{{($slider->name)}}</td>
-            <td>{{($slider->content?? '')}}</td>
+
+            <td>{{ Str::limit($slider->content, 30) }}</td>
             <td>{{($slider->link)}}</td>
 
             <td>
                 <div class="checkbox" item-id="{{$slider->id}}">
                     <label>
-                        <input type="checkbox" class="durum " data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger" {{$slider->status=='1'? 'checked' :''}} data-toggle="toggle">
+                        <input type="checkbox"   class="durum" data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger"  data-size="small" {{$slider->status=='1'? 'checked' :''}} data-toggle="toggle">
 
                     </label>
                 </div>
+
 
             </td>
             <td class="d-flex">
@@ -77,6 +79,7 @@
 
 
 @section('customjs')
+
     <script>
 
         $(document).on('change', '.durum', function(e) {

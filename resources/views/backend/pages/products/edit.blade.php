@@ -70,7 +70,7 @@
                                 <input type="file" name="image" class="file-upload-default" id="imageInput" style="display: none;">
                             </div>
                         @else
-                            {{-- Yeni ürün için normal dosya inputu --}}
+
                             <div class="form-group">
                                 <label for="image">Resim Yükle</label>
                                 <input type="file" name="image" id="imageInput" class="form-control" required>

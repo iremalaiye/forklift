@@ -43,7 +43,7 @@
 
                                             <div class="checkbox" item-id="{{$product->id}}">
                                                 <label>
-                                                    <input type="checkbox" class="durum " data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger" {{$product->status=='1'? 'checked' :''}} data-toggle="toggle">
+                                                    <input type="checkbox" class="durum " data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger" data-size="small" {{$product->status=='1'? 'checked' :''}} data-toggle="toggle">
 
                                                 </label>
                                             </div>

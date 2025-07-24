@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <h4>Hakkımızda Bilgileri</h4>
         @if(!empty($about) && !empty($about->id))
-            <a href="{{ route('panel.about.edit', $about->id) }}"class="btn btn-sm btn-primary mb-3">Düzenle</a>
+            <a href="{{ route('panel.about.edit', $about->id) }}"class="btn btn-sm btn-warning mb-3">Düzenle</a>
         @endif
 
 
