@@ -62,55 +62,6 @@
                         </div>
 
                         <hr>
-                        <h5>İkon Bilgileri</h5>
-
-                        {{-- 1. icon --}}
-                        <div class="form-row">
-                            <div class="col">
-                                <label>1. İkon</label>
-                                <input type="text" name="text_1_icon" class="form-control" value="{{ $about->text_1_icon }}">
-                            </div>
-                            <div class="col">
-                                <label>1. Başlık</label>
-                                <input type="text" name="text_1" class="form-control" value="{{ $about->text_1 }}">
-                            </div>
-                        </div>
-                        <div class="form-group mt-2">
-                            <label>1. İçerik</label>
-                            <textarea name="text_1_content" class="form-control" rows="2">{{ $about->text_1_content }}</textarea>
-                        </div>
-
-                        {{-- 2. icon --}}
-                        <div class="form-row">
-                            <div class="col">
-                                <label>2. İkon</label>
-                                <input type="text" name="text_2_icon" class="form-control" value="{{ $about->text_2_icon }}">
-                            </div>
-                            <div class="col">
-                                <label>2. Başlık</label>
-                                <input type="text" name="text_2" class="form-control" value="{{ $about->text_2 }}">
-                            </div>
-                        </div>
-                        <div class="form-group mt-2">
-                            <label>2. İçerik</label>
-                            <textarea name="text_2_content" class="form-control" rows="2">{{ $about->text_2_content }}</textarea>
-                        </div>
-
-                        {{-- 3. icon --}}
-                        <div class="form-row">
-                            <div class="col">
-                                <label>3. İkon</label>
-                                <input type="text" name="text_3_icon" class="form-control" value="{{ $about->text_3_icon }}">
-                            </div>
-                            <div class="col">
-                                <label>3. Başlık</label>
-                                <input type="text" name="text_3" class="form-control" value="{{ $about->text_3 }}">
-                            </div>
-                        </div>
-                        <div class="form-group mt-2">
-                            <label>3. İçerik</label>
-                            <textarea name="text_3_content" class="form-control" rows="2">{{ $about->text_3_content }}</textarea>
-                        </div>
 
                         {{-- Buttons--}}
                         <button type="submit" class="btn btn-primary mr-2">Güncelle</button>

@@ -22,6 +22,14 @@
             </div>
         </li>
 
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('panel.services.index')}}">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Hizmetlerimiz</span>
+            </a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="{{route('panel.about.index')}}">
                 <i class="icon-grid menu-icon"></i>

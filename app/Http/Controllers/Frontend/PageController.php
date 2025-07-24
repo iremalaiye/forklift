@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Models\About;
 use App\Http\Controllers\Controller;
+use App\Models\Services;
 use Illuminate\Http\Request;
 use App\Models\Product;
 class PageController extends Controller
@@ -18,7 +19,8 @@ class PageController extends Controller
     }
     public function hakkimizda(){
      $about =About::where('id',1)->first();
-        return view('frontend.pages.about',compact('about'));
+        $services = Services::first();
+        return view('frontend.pages.about',compact('about','services'));
     }
     public function iletisim(){
         return view('frontend.pages.contact');
