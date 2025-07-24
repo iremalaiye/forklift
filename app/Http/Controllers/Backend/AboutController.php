@@ -36,15 +36,7 @@ class AboutController extends Controller
             'name' => 'required|string',
             'content' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'text_1_icon' => 'nullable|string',
-            'text_1' => 'nullable|string',
-            'text_1_content' => 'nullable|string',
-            'text_2_icon' => 'nullable|string',
-            'text_2' => 'nullable|string',
-            'text_2_content' => 'nullable|string',
-            'text_3_icon' => 'nullable|string',
-            'text_3' => 'nullable|string',
-            'text_3_content' => 'nullable|string',
+
         ]);
 
         // If a new image was uploaded

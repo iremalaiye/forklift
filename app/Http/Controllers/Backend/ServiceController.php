@@ -51,7 +51,7 @@ class ServiceController extends Controller
         $services->update($data);
 
         // Redirect back to the index page.
-        return redirect()->route('panel.services.index')->with('success', 'Hakkımızda bilgileri güncellendi.');
+        return redirect()->route('panel.services.index')->with('success', 'Hizmetlerimiz bilgileri güncellendi.');
     }
 
 }

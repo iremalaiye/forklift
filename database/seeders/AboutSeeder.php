@@ -19,20 +19,6 @@ class AboutSeeder extends Seeder
     Müşteri memnuniyetini her şeyin önünde tutan anlayışımızla, şeffaf fiyat politikası, güler yüzlü hizmet ve güvenilir çözümler sunuyoruz. Bugüne kadar yüzlerce müşterimizin tercih ettiği firmamız, iş güvenliği standartlarına uygun çalışma prensibiyle Kütahya’da fark yaratmaktadır.
     İster acil bir ihtiyaçta, ister planlı taşımacılık süreçlerinizde… Biz buradayız.
     Çünkü yükünüzü sadece taşımıyor, sorumluluğunu da alıyoruz.",
-            'text_1_icon'=>"icon-truck",
-            'text_1'=>'Güvenilir Hizmet',
-            'text_1_content'=>'Tüm forklift ihtiyaçlarınızda zamanında ve güvenli çözümler sunuyoruz. İşinizi aksatmadan yükünüzü taşıyoruz.',
-            'text_2_icon'=>"icon-truck",
-            'text_2'=>'Bakımlı ve Modern Ekipman',
-            'text_2_content'=>'Tüm forkliftler düzenli bakımdan geçirilir ve iş sağlığına uygundur. En yüksek verimle çalışır.',
-            'text_3_icon'=>"icon-truck",
-            'text_3'=>'Kütahya Geneli Hizmet',
-            'text_3_content'=>'Kütahya’nın her noktasına, hızlı ve ulaşılabilir forklift çözümleri sunuyoruz. Nerede olursanız olun, yanınızdayız.',
-
-
-
-
-
 
         ]);
     }
