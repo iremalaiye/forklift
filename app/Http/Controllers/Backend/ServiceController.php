@@ -3,55 +3,101 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\About;
 use Illuminate\Http\Request;
 use App\Models\Services;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
 
-    // Display the "About" page
+    // Display the "Service" page
     public function index()
     {
-        $services = Services::first();
+        $services = Services::all();
         return view('backend.pages.services.index', compact('services'));
     }
 
-    // 'edit page' of about section
-    public function edit($id)
+
+    // 'edit page' of services section
+    public function edit(string $id)
     {
-        // Find the About record by ID
-        $services = Services::findOrFail($id);
-        return view('backend.pages.services.edit', compact('services'));
+        // Find the Services record by ID
+        $service = Services::findOrFail($id);
+        return view('backend.pages.services.edit', compact('service'));
     }
 
-    // Update the "About" page content
-    public function update(Request $request, $id)
+
+
+    // create new service
+    public function create()
     {
-        // Find the About record by ID
-        $services = Services::findOrFail($id);
+        return view('backend.pages.services.edit');
+    }
 
-        // Validate the form input
-        $data = $request->validate([
-
-            'text_1_icon' => 'nullable|string',
-            'text_1' => 'nullable|string',
-            'text_1_content' => 'nullable|string',
-            'text_2_icon' => 'nullable|string',
-            'text_2' => 'nullable|string',
-            'text_2_content' => 'nullable|string',
-            'text_3_icon' => 'nullable|string',
-            'text_3' => 'nullable|string',
-            'text_3_content' => 'nullable|string',
+    // store service
+    public function store(Request $request)
+    {
+        $request->validate([
+            'text' => 'required|string|max:255',
+            'content' => 'nullable|string',
+            'status' => 'required|in:0,1',
         ]);
 
+        Services::create([
+            'text' => $request->text,
+            'content' => $request->content,
+            'status' => $request->status,
+        ]);
 
-
-        // Update the About record with the new data
-        $services->update($data);
-
-        // Redirect back to the index page.
-        return redirect()->route('panel.services.index')->with('success', 'Hizmetlerimiz bilgileri güncellendi.');
+        return redirect()->route('panel.services.index')->with('success', 'Hizmetlerimiz başarıyla eklendi');
     }
+
+
+    // Update the "services" page content
+    public function update(Request $request, string $id)
+    {
+        // Find the services record by ID
+        $service = Services::findOrFail($id);
+
+        // Validate the form input
+        $request->validate([
+            'text' => 'required|string|max:255',
+            'content' => 'nullable|string',
+            'status' => 'required|in:0,1',
+        ]);
+
+        // Update the services record with the new data
+        $service->update([
+            'text' => $request->text,
+            'content' => $request->content,
+            'status' => $request->status,
+        ]);
+        // Redirect back to the index page.
+        return redirect()->route('panel.services.index')->with('success', 'Hizmetlerimiz başarıyla güncellendi');
+    }
+
+
+
+    // delete service
+    public function destroy(string $id)
+    {
+        $service = Services::findOrFail($id);
+        $service->delete();
+
+        return back()->withSuccess('Hizmet başarıyla silindi!');
+    }
+
+    // update status (active/passiveoggle)
+    public function status(Request $request)
+    {
+        $update = filter_var($request->statu, FILTER_VALIDATE_BOOLEAN);
+        $updateString = $update ? '1' : '0';
+
+        Services::where('id', $request->id)->update(['status' => $updateString]);
+
+        return response(['error' => false, 'status' => $updateString]);
+    }
+
+
 
 }

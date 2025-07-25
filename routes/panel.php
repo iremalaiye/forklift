@@ -24,6 +24,8 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
     Route::get('/services/{id}/edit', [ServiceController::class, 'edit'])->name('services.edit');
     Route::put('/services/{id}', [ServiceController::class, 'update'])->name('services.update');
 
+    Route::get('/panel/services/create', [ServiceController::class, 'create'])->name('services.create');
+    Route::resource('services', ServiceController::class);
 
 
     Route::get('/about', [AboutController::class, 'index'])->name('about.index');
@@ -34,15 +36,9 @@ Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'p
 
     Route::post('/slider-durum/update', [SliderController::class,'status'] )->name('slider.status');
     Route::post('/product-durum /update', [ProductController::class,'status'] )->name('product.status');
+    Route::post('/service-durum /update', [ServiceController::class,'status'] )->name('services.status');
 
     Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
-
-
-
-
-
-
-
 
 
 

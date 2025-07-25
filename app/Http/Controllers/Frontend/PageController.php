@@ -19,7 +19,8 @@ class PageController extends Controller
     }
     public function hakkimizda(){
      $about =About::where('id',1)->first();
-        $services = Services::first();
+     
+        $services = Services::where('status', '1')->latest()->take(8)->get();
         return view('frontend.pages.about',compact('about','services'));
     }
     public function iletisim(){

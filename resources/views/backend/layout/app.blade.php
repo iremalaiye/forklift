@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('backend/css/alertify.min.css')}}"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
     <link rel="stylesheet" href="{{asset('backend/css/alertify-bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">

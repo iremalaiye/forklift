@@ -14,20 +14,9 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
 
-
-            $table->text('text_1_icon') ->nullable();
-            $table->string('text_1') ->nullable();
-            $table->text('text_1_content')->nullable();
-
-            $table->text('text_2_icon') ->nullable();
-            $table->string('text_2') ->nullable();
-            $table->text('text_2_content') ->nullable();
-
-            $table->string('text_3_icon') ->nullable();
-            $table->text('text_3') ->nullable();
-            $table->text('text_3_content') ->nullable();
-
-
+            $table->string('text') ->nullable();
+            $table->text('content')->nullable();
+            $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }

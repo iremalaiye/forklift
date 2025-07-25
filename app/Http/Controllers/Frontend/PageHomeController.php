@@ -12,7 +12,7 @@ class PageHomeController extends Controller
     public function anasayfa(){
       $slider = Slider::where('status','1')->first();
       $title='Anasayfa';
-        $services = Services::first();
+        $services = Services::where('status', '1')->latest()->take(8)->get();
         $products = Product::where('status', '1')->latest()->take(8)->get();
         return view('frontend.pages.index',compact('slider','title','services','products'));
     }
