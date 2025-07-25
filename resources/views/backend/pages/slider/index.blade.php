@@ -38,7 +38,33 @@
             <td>{{($slider->name)}}</td>
 
             <td>{{ Str::limit($slider->content, 30) }}</td>
-            <td>{{($slider->link)}}</td>
+
+
+
+            @php
+                $routes = [
+                    '/' => url('/'),
+                    'hakkimizda' => url('/hakkimizda'),
+                    'urunler' => url('/urunler'),
+                    'iletisim' => url('/iletisim'),
+                ];
+
+                $sliderUrl = $routes[$slider->link] ?? '#';
+            @endphp
+<td>
+            <a href="{{ $sliderUrl }}" target="_blank">
+                {{ ucfirst(trim($slider->link, '/')) ?: 'Anasayfa' }}
+            </a>
+
+</td>
+
+
+
+
+
+
+
+
 
             <td>
                 <div class="checkbox" item-id="{{$slider->id}}">

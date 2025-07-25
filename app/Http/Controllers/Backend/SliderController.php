@@ -52,7 +52,7 @@ class SliderController extends Controller
             'image'=> isset($dosyaadi) ? 'img/slider/' . $dosyaadi : null,]
         );
 
-        return redirect()->route('panel.slider.index')->with('success', 'Anasayfa başarıyla oluşturuldu!');
+        return redirect()->route('panel.slider.index')->with('success', 'Slayt içeriği başarıyla oluşturuldu!');
     }
 
     /**
@@ -89,7 +89,7 @@ class SliderController extends Controller
                 'status'=>$request->status,
                 'image'=>isset($dosyaadi) ? 'img/slider/' . $dosyaadi : null,]
         );
-        return redirect()->route('panel.slider.index')->with('success', 'Anasayfa başarıyla güncellendi!');
+        return redirect()->route('panel.slider.index')->with('success', 'Slayt İçeriği başarıyla güncellendi!');
 
     }
 

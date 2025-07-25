@@ -20,25 +20,24 @@
                     <div class="col-md-9 order-2">
 
                         <div class="row">
-                            <div class="col-md-12 mb-5">
-                                <div class="float-md-left mb-4"><h2 class="text-black h5">Hizmetlerimiz</h2></div>
 
-                        </div>
                         <div class="row mb-5" >
 @if(!empty($products)&& $products->count()>0)
      @foreach($products as $product)
 
                                         <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                                            <a href="{{ route('urundetay', $product->slug) }}" class="text-decoration-none text-dark d-block">
                                             <div class="block-4 text-center border">
                                                 <figure class="block-4-image">
-                                                    <a href="{{route('urundetay',$product->slug)}}"><img src="{{asset($product->image)}}" alt="Image placeholder" class="img-fluid rounded"></a>
+                                                   <img src="{{asset($product->image)}}" alt="Image placeholder" class="img-fluid rounded">
                                                 </figure>
                                                 <div class="block-4-text p-4">
-                                                    <h3><a href="{{route('urundetay',$product->slug)}}">{{($product->model)}}</a></h3>
+                                                    <h3>{{($product->model)}}</h3>
                                                     <p class="mb-0">{{($product->description)}}</p>
                                                     <p class="text-primary font-weight-bold">{{($product->capacity)}}</p>
                                                 </div>
                                             </div>
+                                            </a>
                                         </div>
      @endforeach
 @endif
@@ -93,6 +92,18 @@
                     object-fit: cover;
                     width: 100%;
                 }
+                .block-4 {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .block-4:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+                    z-index: 10;
+                }
+
             </style>
 
 @endsection

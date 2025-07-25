@@ -65,5 +65,13 @@
         </div>
     </div>
 
+    <style>
+        .block-4:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+        }
+    </style>
+
 
     @endsection

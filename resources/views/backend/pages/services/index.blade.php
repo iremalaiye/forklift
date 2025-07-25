@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Hizmetlerimiz Listesi</h4>
                     <p class="card-description">
-                        <a href="{{ route('panel.services.create') }}" class="btn btn-primary">Yeni Ürün Ekle</a>
+                        <a href="{{ route('panel.services.create') }}" class="btn btn-primary">Yeni Hizmet Ekle</a>
                     </p>
 
                     @if(session('success'))
@@ -37,7 +37,7 @@
                                         </td>
                                         <td>{{ $service->text??"" }}</td>
 
-                                        <td>{{ $service->content ??""}}</td>
+                                        <td>{{ Str::limit($service->content ??"", 50) }}</td>
 
                                         <td>
 

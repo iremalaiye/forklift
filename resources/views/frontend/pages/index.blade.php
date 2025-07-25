@@ -10,7 +10,40 @@
                     <div class="intro-text text-center text-md-left">
                         <p class="mb-4 text-white">{{$slider->content??''}} </p>
                         <p>
-                            <a href="{{url('/').'/'. ($slider->link ?? '') }}" class="btn btn-sm btn-warning">Hizmetlerimiz</a>
+                        @php
+                            $routes = [
+                                '/' => url('/'),
+                                'hakkimizda' => url('/hakkimizda'),
+                                'urunler' => url('/urunler'),
+                                'iletisim' => url('/iletisim'),
+                            ];
+                            $sliderLink = $slider->link ?? 'urunler';
+                            $buttonUrl = $routes[$sliderLink] ?? url('/');
+
+                            $buttonText = '';
+                            switch ($sliderLink) {
+                                case '/':
+                                    $buttonText = 'Anasayfa';
+                                    break;
+                                case 'hakkimizda':
+                                    $buttonText = 'Hakkımızda';
+                                    break;
+                                case 'urunler':
+                                    $buttonText = 'HİZMETLERİMİZ';
+                                    break;
+                                case 'iletisim':
+                                    $buttonText = 'İLETİŞİM';
+                                    break;
+                                default:
+                                    $buttonText = 'Hizmetlerimiz';
+                            }
+                        @endphp
+
+                        <p>
+                            <a href="{{ $buttonUrl }}" class="btn btn-sm btn-warning">{{ $buttonText }}</a>
+                        </p>
+
+
                         </p>
                     </div>
                 </div>
@@ -90,7 +123,13 @@
         </div>
     </div>
 
-
+<style>
+    .block-4:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+    }
+</style>
 
 
 @endsection

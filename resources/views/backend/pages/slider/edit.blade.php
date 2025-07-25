@@ -98,10 +98,21 @@
                             <textarea  class="form-control" id="slogan" name ="content" placeholder="Slider Slogan" rows="3"> {!!$slider->content ?? ''  !!}</textarea>
                         </div>
 
+
+
                         <div class="form-group">
-                            <label for="link">link</label>
-                            <input type ="text" class="form-control" id="link" name ="link" value="{{$slider->link ?? ''}}"placeholder="Anasayfa Link">
+                            <label for="link">Yönlendirmek İstediğiniz Sayfa</label>
+                            <select class="form-control" id="link" name="link">
+
+                                    <option value="/">Anasayfa</option>
+                                    <option value="hakkimizda">Hakkımızda</option>
+                                    <option value="urunler">Hizmetlerimiz</option>
+                                    <option value="iletisim">İletişim</option>
+                                </select>
+                            </select>
                         </div>
+
+
 
 
 
