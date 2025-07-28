@@ -7,7 +7,7 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">{{ isset($service) ? 'Ürünü Düzenle' : 'Yeni Ürün Ekle' }}</h4>
+                    <h4 class="card-title">{{ isset($service) ? 'Hizmetlerimizi Düzenle' : 'Yeni Hizmet Ekle' }}</h4>
 
                     {{-- error --}}
                     @if($errors->any())

@@ -30,7 +30,7 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Anasayfa</h4>
+                    <h4 class="card-title">Slayt İçeriği Düzenle</h4>
 
                     @if($errors)
                         @foreach($errors->all() as $error)

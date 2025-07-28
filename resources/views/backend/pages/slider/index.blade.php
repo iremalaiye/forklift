@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Slayt İçeriği </h4>
                     <p class="card-description">
-                        <a href="{{route('panel.slider.create')}}" class="btn btn-primary">Yeni</a>
+                        <a href="{{route('panel.slider.create')}}" class="btn btn-primary">Yeni Slayt Ekle</a>
                     </p>
 
 
