@@ -16,8 +16,13 @@ class SiteSettingMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        // Retrieve all site settings as a key-value array (name => data)
         $settings=SiteSetting::pluck('data','name')->toArray();
+
+        // Share the settings with all views
         view()->share(['settings'=>$settings]);
+
+        // Continue to the next middleware/request
         return $next($request);
     }
 }
