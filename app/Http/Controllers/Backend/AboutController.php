@@ -9,21 +9,26 @@ use App\Models\About;
 
 class AboutController extends Controller
 {
-    // Display the "About" page
+
+    // Show the "About" page in the admin panel
     public function index()
     {
-        // Get the first record from the About table
+        // Get the first about record
         $about = About::first();
+        // Pass the data to the view
         return view('backend.pages.about.index', compact('about'));
     }
+
 
     // 'edit page' of about section
     public function edit($id)
     {
         // Find the About record by ID
         $about = About::findOrFail($id);
+        // Pass the data to the edit view
         return view('backend.pages.about.edit', compact('about'));
     }
+
 
     // Update the "About" page content
     public function update(Request $request, $id)
@@ -31,7 +36,7 @@ class AboutController extends Controller
         // Find the About record by ID
         $about = About::findOrFail($id);
 
-        // Validate the form input
+        // Validate the request data
         $data = $request->validate([
             'name' => 'required|string',
             'content' => 'required|string',
@@ -41,7 +46,7 @@ class AboutController extends Controller
 
         // If a new image was uploaded
         if ($request->hasFile('image')) {
-            // Delete the old image file if it exists
+            // If there is an old image, delete it from storage
             if ($about->image && file_exists(public_path($about->image))) {
                 unlink(public_path($about->image));
             }
@@ -57,7 +62,7 @@ class AboutController extends Controller
         // Update the About record with the new data
         $about->update($data);
 
-        // Redirect back to the index page.
+        // Redirect back to the about index page.
         return redirect()->route('panel.about.index')->with('success', 'Hakkımızda bilgileri güncellendi.');
     }
 }

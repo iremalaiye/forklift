@@ -8,17 +8,20 @@ use App\Models\Product;
 
 class DashboardController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
 
+    //show the dashboard page of admin panel
     public function index()
     {
+        // take the 5 most recent products
         $latestProducts = Product::latest()->take(5)->get();
 
+        // Pass the latest products to the dashboard view
         return view('backend.pages.index', compact('latestProducts'));
     }
-
 
 
     /**
@@ -29,6 +32,7 @@ class DashboardController extends Controller
         //
     }
 
+
     /**
      * Store a newly created resource in storage.
      */
@@ -36,6 +40,7 @@ class DashboardController extends Controller
     {
         //
     }
+
 
     /**
      * Display the specified resource.
@@ -45,6 +50,7 @@ class DashboardController extends Controller
         //
     }
 
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -53,6 +59,7 @@ class DashboardController extends Controller
         //
     }
 
+
     /**
      * Update the specified resource in storage.
      */
@@ -60,6 +67,7 @@ class DashboardController extends Controller
     {
         //
     }
+
 
     /**
      * Remove the specified resource from storage.
