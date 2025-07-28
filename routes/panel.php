@@ -6,7 +6,8 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\ContactController;
-Route::group(['middleware' => ['panelsetting','auth'],'prefix'=>'panel','as'=>'panel.'], function () {
+Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel','as'=>'panel.'], function () {
+
 
 
     Route::get('/', [DashboardController::class,'index'] )->name('index');

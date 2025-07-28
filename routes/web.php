@@ -17,9 +17,10 @@ Route::group(['middleware' => 'sitesetting'], function () {
     Route::get('/iletisim', [PageController::class,'iletisim'] )->name('iletisim');
     Route::post('/iletisim/gonder', [ContactController::class, 'store'])->name('iletisim.gonder');
 
-    Auth::routes();
+
+    Auth::routes(['register' => false]);
     Route::get('/login', [CustomAuthController::class,'login'] )->name('login');
-    Route::get('/register', [CustomAuthController::class,'register'] )->name('register');
+
     Route::get('/cikis', [AjaxController::class,'logout'] )->name('cikis');
 
 
