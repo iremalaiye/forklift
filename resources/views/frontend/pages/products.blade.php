@@ -25,21 +25,22 @@
 @if(!empty($products)&& $products->count()>0)
      @foreach($products as $product)
 
-                                        <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                                            <a href="{{ route('urundetay', $product->slug) }}" class="text-decoration-none text-dark d-block">
-                                            <div class="block-4 text-center border">
+                                    <div class="col-sm-6 col-lg-4 mb-4 d-flex">
+                                        <a href="{{ route('urundetay', $product->slug) }}" class="text-decoration-none text-dark d-block flex-grow-1">
+                                            <div class="block-4 text-center border d-flex flex-column flex-grow-1">
                                                 <figure class="block-4-image">
-                                                   <img src="{{asset($product->image)}}" alt="Image placeholder" class="img-fluid rounded">
+                                                    <img src="{{asset($product->image)}}" alt="Image placeholder" class="img-fluid rounded">
                                                 </figure>
-                                                <div class="block-4-text p-4">
+                                                <div class="block-4-text p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                                     <h3>{{($product->model)}}</h3>
                                                     <p class="mb-0">{{($product->content)}}</p>
                                                     <p class="text-primary font-weight-bold">{{($product->capacity)}}</p>
                                                 </div>
                                             </div>
-                                            </a>
-                                        </div>
-     @endforeach
+                                        </a>
+                                    </div>
+
+                                @endforeach
 @endif
 
 

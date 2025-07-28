@@ -38,15 +38,21 @@
     <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
             <ul class="site-menu js-clone-nav d-none d-md-block">
-                <li class="active"><a href="{{route('anasayfa')}}">Anasayfa</a></li>
 
-                <li >
-                    <a href="{{route('hakkimizda')}}">Hakkımızda</a>
-
+                <li class="{{ request()->routeIs('anasayfa') ? 'active' : '' }}">
+                    <a href="{{route('anasayfa')}}">Anasayfa</a>
                 </li>
-                <li><a href="{{route('urunler')}}">HİZMETLERİMİZ</a></li>
+                <li class="{{ request()->routeIs('hakkimizda') ? 'active' : '' }}">
+                    <a href="{{route('hakkimizda')}}">Hakkımızda</a>
+                </li>
+                <li class="{{ request()->routeIs('urunler*') ? 'active' : '' }}">
+                    <a href="{{route('urunler')}}">HİZMETLERİMİZ</a>
+                </li>
+                <li class="{{ request()->routeIs('iletisim') ? 'active' : '' }}">
+                    <a href="{{route('iletisim')}}">İLETİŞİM</a>
+                </li>
 
-                <li><a href="{{route('iletisim')}}">İLETİŞİM</a></li>
+
             </ul>
         </div>
     </nav>

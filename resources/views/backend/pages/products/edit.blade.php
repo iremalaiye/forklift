@@ -95,7 +95,7 @@
                             <label for="content">Açıklama</label>
                             <textarea id="content" name="content" class="form-control" rows="4" placeholder="Ürün açıklaması">{{ $product->content ?? old('content') }}</textarea>
                         </div>
-//seo
+
                         <div class="form-group">
                             <label for="title">Seo Title</label>
                             <input type="text" class="form-control" id="title" name="title" value="{{$product->title ?? ''}}" placeholder="Seo Title">

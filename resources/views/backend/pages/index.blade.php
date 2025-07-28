@@ -27,7 +27,7 @@
                         <div class="card-body p-2 text-center">
                             <h6 class="card-title text-danger mb-1" style="font-size: 16px;">{{ $product->model }}</h6>
                             <p class="text-danger mb-1" style="font-size: 14px;">{{ $product->capacity }}</p>
-                            <p class="text-muted small mb-2" style="font-size: 12px;">{{ $product->description }}</p>
+                            <p class="text-muted small mb-2" style="font-size: 12px;">{{ $product->content }}</p>
                             <small class="text-muted d-block" style="font-size: 11px;">
                                 {{ $product->created_at->diffForHumans() }}
                             </small>
