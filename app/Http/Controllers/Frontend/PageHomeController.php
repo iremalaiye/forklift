@@ -16,6 +16,21 @@ class PageHomeController extends Controller
       $title='Anasayfa';
         $services = Services::where('status', '1')->latest()->take(8)->get();
         $products = Product::where('status', '1')->latest()->take(8)->get();
-        return view('frontend.pages.index',compact('slider','title','services','products'));
+
+      //seo
+        $seolists = metaolustur('anasayfa');
+
+        $seo = [
+            'title' =>  $seolists['title'] ?? '',
+            'description' => $seolists['description'] ?? '',
+            'keywords' => $seolists['keywords'] ?? '',
+            'image' => asset('img/page-bg.jpg'),
+            'url'=>  $seolists['currenturl'],
+            'canonical'=> $seolists['trpage'],
+            'robots' => 'index, follow',
+        ];
+
+
+        return view('frontend.pages.index',compact('seo','slider','title','services','products'));
     }
 }

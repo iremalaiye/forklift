@@ -33,7 +33,7 @@
                                                 </figure>
                                                 <div class="block-4-text p-4">
                                                     <h3>{{($product->model)}}</h3>
-                                                    <p class="mb-0">{{($product->description)}}</p>
+                                                    <p class="mb-0">{{($product->content)}}</p>
                                                     <p class="text-primary font-weight-bold">{{($product->capacity)}}</p>
                                                 </div>
                                             </div>

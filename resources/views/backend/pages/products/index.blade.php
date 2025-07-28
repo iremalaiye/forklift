@@ -38,7 +38,7 @@
                                         <td>{{ $product->model }}</td>
 
                                         <td>{{ $product->capacity }}</td>
-                                        <td>{{ Str::limit($product->description, 50) }}</td>
+                                        <td>{{ Str::limit($product->content, 50) }}</td>
                                         <td>
 
                                             <div class="checkbox" item-id="{{$product->id}}">

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('model')->nullable();
             $table->string('slug')->nullable();
             $table->string('capacity')->nullable();
-            $table->text('description')->nullable();
+            $table->text('content')->nullable();
             $table->string('image')->nullable();
             $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();

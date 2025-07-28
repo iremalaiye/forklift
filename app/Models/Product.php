@@ -11,11 +11,21 @@ class Product extends Model
         'model',
         'slug',
         'capacity',
-        'description',
+        'content',
         'image',
         'status',
+        'title',
+        'description',
+        'keywords',
 
     ];
+
+    //seo
+    public function images()
+    {
+        return $this->hasOne(ImageMedia::class,'table_id','id')->where('model_name','Product');
+    }
+
 
     public function sluggable(): array
     {

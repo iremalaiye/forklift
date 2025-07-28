@@ -90,11 +90,31 @@
                             <input type="text" id="capacity" name="capacity" class="form-control" value="{{ $product->capacity ?? old('capacity') }}" placeholder="Kapasite">
                         </div>
 
-                        {{-- description --}}
+                        {{-- content --}}
                         <div class="form-group">
-                            <label for="description">Açıklama</label>
-                            <textarea id="description" name="description" class="form-control" rows="4" placeholder="Ürün açıklaması">{{ $product->description ?? old('description') }}</textarea>
+                            <label for="content">Açıklama</label>
+                            <textarea id="content" name="content" class="form-control" rows="4" placeholder="Ürün açıklaması">{{ $product->content ?? old('content') }}</textarea>
                         </div>
+//seo
+                        <div class="form-group">
+                            <label for="title">Seo Title</label>
+                            <input type="text" class="form-control" id="title" name="title" value="{{$product->title ?? ''}}" placeholder="Seo Title">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="description">Seo Description</label>
+                            <input type="text" class="form-control" id="description" name="description" value="{{$product->description2 ?? ''}}" placeholder="Seo description">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="keywords">Keywords</label>
+                            <input type="text" class="form-control" id="keywords" name="keywords" value="{{$product->keywords ?? ''}}" placeholder="Seo Keywords">
+                        </div>
+
+
+
 
                         {{-- status --}}
                         <div class="form-group">

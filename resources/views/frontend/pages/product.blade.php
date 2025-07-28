@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-md-6">
                         <h2 class="text-black">{{$product->model ?? ''}}</h2>
-                      {!! $product->description ?? '' !!}
+                      {!! $product->content ?? '' !!}
 
                         <p><strong class="text-primary h4"> {{$product->capacity ?? ''}}</strong></p>
 

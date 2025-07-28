@@ -12,4 +12,11 @@ class About extends Model
         'name',
         'content',
     ];
+
+    //seo
+    public function images()
+    {
+        return $this->hasOne(ImageMedia::class,'table_id','id')->where('model_name','About');
+    }
+
 }

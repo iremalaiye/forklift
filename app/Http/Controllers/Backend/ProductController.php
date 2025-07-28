@@ -43,7 +43,7 @@ class ProductController extends Controller
         $request->validate([
             'model' => 'required|string|max:255',
             'capacity' => 'nullable|string|max:255',
-            'description' => 'nullable|string',
+            'content' => 'nullable|string',
             'status' => 'required|in:0,1',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
@@ -62,7 +62,10 @@ class ProductController extends Controller
             'model' => $request->model,
             'slug' => Str::slug($request->model),
             'capacity' => $request->capacity,
-            'description' => $request->description,
+            'content' => $request->content,
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'keywords'=>$request->keywords,
             'status' => $request->status,
             'image' => isset($dosyaadi) ? 'img/products/' . $dosyaadi : null,
         ]);
@@ -102,7 +105,7 @@ class ProductController extends Controller
         $request->validate([
             'model' => 'required|string|max:255',
             'capacity' => 'nullable|string|max:255',
-            'description' => 'nullable|string',
+            'content' => 'nullable|string',
             'status' => 'required|in:0,1',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
@@ -128,7 +131,10 @@ class ProductController extends Controller
             'model' => $request->model,
             'slug' => Str::slug($request->model),
             'capacity' => $request->capacity,
-            'description' => $request->description,
+            'content' => $request->content,
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'keywords'=>$request->keywords,
             'status' => $request->status,
             'image' => isset($dosyaadi) ? 'img/products/' . $dosyaadi : $product->image,
         ]);
