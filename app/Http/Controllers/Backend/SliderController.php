@@ -11,8 +11,8 @@ use App\Http\Requests\SliderRequest;
 
 
 class SliderController extends Controller
-
 {
+
     /**
      * Display a listing of the resource.
      */
@@ -143,7 +143,5 @@ class SliderController extends Controller
 
         return response(['error' => false, 'status' => $updateString]);
     }
-
-
 
 }

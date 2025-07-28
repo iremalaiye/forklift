@@ -9,6 +9,8 @@ use App\Models\Product;
 use App\Models\About;
 class PageHomeController extends Controller
 {
+
+    // Display the homepage with active slider, services, and products
     public function anasayfa(){
       $slider = Slider::where('status','1')->first();
       $title='Anasayfa';

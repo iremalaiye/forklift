@@ -10,12 +10,14 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        // Validate the request inputs
         $request->validate([
             'c_fname' => 'required|string',
             'c_lname' => 'required|string',
             'c_email' => 'required|email',
         ]);
 
+        // Create a new contact message record
         Contact::create([
             'first_name' => $request->c_fname,
             'last_name' => $request->c_lname,
@@ -24,27 +26,34 @@ class ContactController extends Controller
             'message' => $request->c_message,
         ]);
 
+        // Redirect back with success message
         return redirect()->back()->with('success', 'Mesajınız başarıyla gönderildi.');}
 
 
-
+    // show messages page in admin panel.
     public function index()
     {
+        // Get the latest contact messages with pagination
         $contacts = Contact::latest()->paginate(10);
         return view('backend.pages.messages.index', compact('contacts'));
     }
 
+
     public function show($id)
     {
+        // Find the contact message by ID or fail
         $contact = Contact::findOrFail($id);
         return view('backend.pages.messages.show', compact('contact'));
     }
 
+
     public function destroy($id)
     {
+        // Find and delete the contact message
         $contact = Contact::findOrFail($id);
         $contact->delete();
 
+        // Redirect to contact index page with success message
         return redirect()->route('panel.contacts.index')->with('success', 'Mesaj başarıyla silindi.');
     }
 
