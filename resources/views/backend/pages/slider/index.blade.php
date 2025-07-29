@@ -66,7 +66,7 @@
 
 
 
-            <td>
+            <td class="text-center align-middle">
                 <div class="checkbox" item-id="{{$slider->id}}">
                     <label>
                         <input type="checkbox"   class="durum" data-on="aktif" data-off="pasif" data-onstyle="success" data-offstyle="danger"  data-size="small" {{$slider->status=='1'? 'checked' :''}} data-toggle="toggle">

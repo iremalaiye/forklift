@@ -39,7 +39,7 @@
 
                                         <td>{{ Str::limit($service->content ??"", 50) }}</td>
 
-                                        <td>
+                                        <td class="text-center align-middle">
 
                                             <div class="checkbox" item-id="{{$service->id}}">
                                                 <label>
