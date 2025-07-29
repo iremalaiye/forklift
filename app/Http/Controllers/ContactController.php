@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
+use App\Models\Setting;
 class ContactController extends Controller
 {
 
@@ -31,12 +32,17 @@ class ContactController extends Controller
 
         Contact::create($data);
 
+        $adminEmail = Setting::where('key', 'admin_email')->value('value');
 
-        Mail::to('admin@example.com')->send(new ContactMail($data));
+        if($adminEmail) {
+            Mail::to($adminEmail)->send(new ContactMail($data));
+        } else {
+
+            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactMail($data));
+        }
 
         return redirect()->back()->with('success', 'Mesajınız başarıyla gönderildi.');
     }
-
 
 
 

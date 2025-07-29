@@ -101,6 +101,7 @@
 
 <script src="{{asset('backend/js/bootstrap-toggle.min.js')}}"></script>
 <script src="{{asset('backend/js/alertify.min.js')}}"></script>
+
 @yield('customjs')
 <!-- End custom js for this page-->
 </body>

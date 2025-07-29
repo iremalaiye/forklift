@@ -1,4 +1,3 @@
-<h2>Yeni Mesaj</h2>
 
 <p><strong>Ad Soyad:</strong> {{ $data['first_name'] }} {{ $data['last_name'] }}</p>
 <p><strong>Email:</strong> {{ $data['email'] }}</p>

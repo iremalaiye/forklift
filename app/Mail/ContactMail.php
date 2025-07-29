@@ -13,7 +13,7 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;  // form verisini tutacak
+    public $data;
 
     public function __construct($data)
 {
@@ -22,7 +22,7 @@ class ContactMail extends Mailable
 
     public function build()
 {
-    return $this->subject('Yeni İletişim Mesajı')
+    return $this->subject('Yeni Kütahya Forklift Mesajı')
         ->view('emails.contact');
 }
 }

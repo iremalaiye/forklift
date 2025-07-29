@@ -5,13 +5,25 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
+
                     <h4 class="card-title">Gelen Mesajlar</h4>
 
-                    @if(session('success'))
+                    <form action="{{ route('panel.email.save') }}" method="POST">
+                        @csrf
+                        <label for="admin_email">Admin Mail Adresi</label>
+                        <input type="email" name="admin_email" id="admin_email" value="{{ old('admin_email', $adminEmail ?? '') }}" required>
+                        <button type="submit">Kaydet</button>
+                    </form>
+
+
+
+                @if(session('success'))
                         <div class="alert alert-success">
                             {{ session('success') }}
                         </div>
                     @endif
+
+
 
                     <div class="table-responsive">
                         <table class="table table-bordered">
@@ -53,7 +65,7 @@
                     </div>
 
                     <div class="mt-3">
-                        {{ $contacts->links() }}
+                        {{ $contacts->links('pagination::bootstrap-4') }}
                     </div>
 
                 </div>

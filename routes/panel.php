@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
 Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel','as'=>'panel.'], function () {
 
 
@@ -49,6 +50,8 @@ Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel',
     Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
 
+    Route::post('/admin-email', [AdminController::class, 'saveAdminEmail'])->name('email.save');
+    Route::get('/admin-email', [AdminController::class, 'showAdminEmailForm'])->name('email.form');
 
 
 
