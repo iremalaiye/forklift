@@ -58,7 +58,8 @@ return [
      *    'method' => array('Str','slug'),
      */
 
-    'method' => null,
+
+    'method' => ['Illuminate\\Support\\Str', 'slug'],
 
     // Separator to use when generating slugs.  Defaults to a hyphen.
 

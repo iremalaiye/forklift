@@ -4,30 +4,41 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 class ContactController extends Controller
 {
 
 
     public function store(Request $request)
     {
-        // Validate the request inputs
         $request->validate([
             'c_fname' => 'required|string',
             'c_lname' => 'required|string',
             'c_email' => 'required|email',
+            'c_subject' => 'nullable|string',
+            'c_message' => 'nullable|string',
         ]);
 
-        // Create a new contact message record
-        Contact::create([
+        $data = [
             'first_name' => $request->c_fname,
             'last_name' => $request->c_lname,
             'email' => $request->c_email,
             'subject' => $request->c_subject,
             'message' => $request->c_message,
-        ]);
+        ];
 
-        // Redirect back with success message
-        return redirect()->back()->with('success', 'Mesajınız başarıyla gönderildi.');}
+
+        Contact::create($data);
+
+
+        Mail::to('admin@example.com')->send(new ContactMail($data));
+
+        return redirect()->back()->with('success', 'Mesajınız başarıyla gönderildi.');
+    }
+
+
+
 
 
     // show messages page in admin panel.
