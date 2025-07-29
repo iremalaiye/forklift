@@ -1,55 +1,57 @@
 @extends('frontend.layout.layout')
 @section ('content')
 
-    <div class="site-blocks-cover" style="background-image: url({{asset($slider->image?? "")}});" data-aos="fade">
-        <div class="container">
-            <div style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
-            <div class="row align-items-start align-items-md-center justify-content-end">
-                <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-                    <h1 class="mb-2 text-white">{{$slider->name??__('Merhaba')}}</h1>
-                    <div class="intro-text text-center text-md-left">
-                        <p class="mb-4 text-white">{{$slider->content??''}} </p>
-                        <p>
-                        @php
-                            $routes = [
-                                '/' => url('/'),
-                                'hakkimizda' => url('/hakkimizda'),
-                                'urunler' => url('/urunler'),
-                                'iletisim' => url('/iletisim'),
-                            ];
-                            $sliderLink = $slider->link ?? 'urunler';
-                            $buttonUrl = $routes[$sliderLink] ?? url('/');
+    <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach($sliders as $key => $slider)
+                <div class="carousel-item @if($key == 0) active @endif">
+                    <div class="site-blocks-cover" style="background-image: url({{ asset($slider->image ?? '') }}); font-family: 'Poppins', sans-serif;" data-aos="fade">
+                        <div class="container">
+                            <div style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                            <div class="row align-items-start align-items-md-center justify-content-end">
+                                <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
+                                    <h1 class="mb-2 text-white">{{ $slider->name ?? 'Merhaba' }}</h1>
+                                    <div class="intro-text text-center text-md-left">
+                                        <p class="mb-4 text-white">{{ $slider->content ?? '' }}</p>
 
-                            $buttonText = '';
-                            switch ($sliderLink) {
-                                case '/':
-                                    $buttonText = 'Anasayfa';
-                                    break;
-                                case 'hakkimizda':
-                                    $buttonText = 'Hakkımızda';
-                                    break;
-                                case 'urunler':
-                                    $buttonText = 'HİZMETLERİMİZ';
-                                    break;
-                                case 'iletisim':
-                                    $buttonText = 'İLETİŞİM';
-                                    break;
-                                default:
-                                    $buttonText = 'Hizmetlerimiz';
-                            }
-                        @endphp
+                                        @php
+                                            $routes = [
+                                              '/' => url('/'),
+                                              'hakkimizda' => url('/hakkimizda'),
+                                              'urunler' => url('/urunler'),
+                                              'iletisim' => url('/iletisim'),
+                                            ];
+                                            $sliderLink = $slider->link ?? 'urunler';
+                                            $buttonUrl = $routes[$sliderLink] ?? url('/');
+                                            $buttonText = match ($sliderLink) {
+                                                '/' => 'Anasayfa',
+                                                'hakkimizda' => 'Hakkımızda',
+                                                'urunler' => 'HİZMETLERİMİZ',
+                                                'iletisim' => 'İLETİŞİM',
+                                                default => 'Hizmetlerimiz'
+                                            };
+                                        @endphp
 
-                        <p>
-                            <a href="{{ $buttonUrl }}" class="btn btn-sm btn-warning">{{ $buttonText }}</a>
-                        </p>
-
-
-                        </p>
+                                        <p><a href="{{ $buttonUrl }}" class="btn btn-sm btn-warning">{{ $buttonText }}</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
+
+        <!-- Slider Control buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
     </div>
+
+
 
 
 

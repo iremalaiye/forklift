@@ -12,8 +12,9 @@ class PageHomeController extends Controller
 
     // Display the homepage with active slider, services, and products
     public function anasayfa(){
-      $slider = Slider::where('status','1')->first();
-      $title='Anasayfa';
+
+        $sliders = \App\Models\Slider::where('status', '1')->get();
+        $title='Anasayfa';
         $services = Services::where('status', '1')->latest()->take(8)->get();
         $products = Product::where('status', '1')->latest()->take(8)->get();
 
@@ -31,6 +32,6 @@ class PageHomeController extends Controller
         ];
 
 
-        return view('frontend.pages.index',compact('seo','slider','title','services','products'));
+        return view('frontend.pages.index',compact('seo','sliders','title','services','products'));
     }
 }
