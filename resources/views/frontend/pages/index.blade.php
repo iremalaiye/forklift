@@ -54,14 +54,12 @@
 
 
 
-
-
-    <div class="site-section block-3 site-blocks-2 bg-light">
+    <div class="site-section block-3 site-blocks-2 bg-light py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 site-section-heading text-center pt-4">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8 text-center">
                     <h2>Hizmetlerimiz</h2>
-
+                    <hr class="w-25 mx-auto my-3" style="border-top: 2px solid #fbbf24;">
                 </div>
             </div>
 
@@ -69,24 +67,23 @@
                 <div class="col-md-12">
                     <div class="nonloop-block-3 owl-carousel">
                         @foreach($services as $service)
-                            <div class="item">
-                                    <div class="block-4 text-center shadow-sm" style="height:350px;transition: 0.3s;">
-                                        <figure class="block-4-image mb-0"><br>
-                                            <i class="fa fa-truck fa-2x" style="color: #0a0a0a ;"></i><br>
-                                        </figure>
-                                        <div class="block-4-text p-4">
-                                            <h2 class="text-uppercase text-warning">{{$service->text?? "" }}</h2>
-                                            <p class="text-dark">{{$service->content?? ""}} </p>
-                                        </div>
+                            <div class="item px-2">
+                                <div class="block-4 text-center shadow rounded bg-white h-100 d-flex flex-column justify-content-center align-items-center p-4" style="transition: 0.3s ease-in-out; min-height: 350px;">
+                                    <div class="icon mb-3">
+                                        <i class="fa fa-truck fa-3x text-dark"></i>
                                     </div>
+                                    <h3 class="text-uppercase text-warning mb-2" style="font-weight: bold;">{{ $service->text ?? "" }}</h3>
+                                    <p class="text-muted">{{ $service->content ?? "" }}</p>
+                                </div>
                             </div>
                         @endforeach
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+
+
 
 
 
