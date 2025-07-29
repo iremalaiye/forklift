@@ -109,8 +109,8 @@
                                         <div class="block-4-text p-4">
                                             <h3 class="text-danger">{{ $product->model }}</h3>
                                             <p class="text-danger font-weight-bold">{{ $product->capacity }}</p>
-                                            <p class="mb-0">{{ \Illuminate\Support\Str::limit($product->description, 60) }}</p>
-                                        </div>
+                                            <p class="mb-0">{{ \Illuminate\Support\Str::limit($product->content, 60) }}</p>
+                                          </div>
                                     </div>
                                 </a>
                             </div>
