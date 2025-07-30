@@ -24,6 +24,17 @@ if (!function_exists('metaolustur')) {
     {
         $pageseo = \App\Models\PageSeo::where('page', $page)->with(['images', 'pages'])->first();
 
+        if (!$pageseo) {
+            return [
+                'title' => config('app.name'),
+                'description' => '',
+                'keywords' => '',
+                'currenturl' => ozel_path(app()->getLocale(), $page),
+                'metalar' => [],
+                'bgimg' => '',
+                'trpage' => ozel_path('tr', $page),
+                ];}
+
         $metalar = [];
         $title = $pageseo->title;
         $description = $pageseo->description;

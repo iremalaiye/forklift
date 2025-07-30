@@ -19,6 +19,9 @@ class ProductSeeder extends Seeder
             'content'=>'Her türlü zor şartta görevini tam anlamıyla yerine getirmek için tasarlanmıştır. Açık-petek/plaka-kanat radyatör, motor ve şanzımanın en ağır koşullarda en fazla soğutmasını sağlar.',
             'image'=>'https://www.altermakmakine.com/upload/pages/1000x1000/hserisi1.jpg',
             'status'=>'1',
+            'title' => '',
+            'description' => '',
+            'keywords' => '',
         ]);
 
         Product::create([
@@ -27,6 +30,10 @@ class ProductSeeder extends Seeder
             'content'=>' Üç teker, dolgu lastikli, operatörün oturarak çalıştığı kaldırıcı.',
             'image'=>'https://www.unturkiye.com/wp-content/uploads/2021/11/unlithiumionforklift-768x512.jpg',
             'status'=>'1',
+            'title' => '',
+            'description' => '',
+            'keywords' => '',
+
         ]);
     }
 }

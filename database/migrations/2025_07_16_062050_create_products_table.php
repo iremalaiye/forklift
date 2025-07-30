@@ -19,6 +19,9 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->string('image')->nullable();
             $table->enum('status', ['0', '1'])->default('0');
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('keywords')->nullable();
             $table->timestamps();
         });
     }

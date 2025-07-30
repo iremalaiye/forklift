@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Setting;
+use App\Models\EmailSetting;
 use Illuminate\Http\Request;
 
 
@@ -13,7 +13,7 @@ class AdminController extends Controller
             'admin_email' => 'required|email',
         ]);
 
-        Setting::updateOrCreate(
+        EmailSetting::updateOrCreate(
             ['key' => 'admin_email'],
             ['value' => $request->admin_email]
         );
@@ -22,7 +22,7 @@ class AdminController extends Controller
     }
     public function showAdminEmailForm()
     {
-        $adminEmail = Setting::where('key', 'admin_email')->value('value');
+        $adminEmail = EmailSetting::where('key', 'admin_email')->value('value');
         return view('admin.email-settings', compact('adminEmail'));
     }
 }

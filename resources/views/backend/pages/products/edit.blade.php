@@ -104,7 +104,7 @@
 
                         <div class="form-group">
                             <label for="description">Seo Description</label>
-                            <input type="text" class="form-control" id="description" name="description" value="{{$product->description2 ?? ''}}" placeholder="Seo description">
+                            <input type="text" class="form-control" id="description" name="description" value="{{$product->description ?? ''}}" placeholder="Seo description">
                         </div>
 
 

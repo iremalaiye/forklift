@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
-use App\Models\Setting;
+use App\Models\EmailSetting;
 class ContactController extends Controller
 {
 
@@ -32,7 +32,7 @@ class ContactController extends Controller
 
         Contact::create($data);
 
-        $adminEmail = Setting::where('key', 'admin_email')->value('value');
+        $adminEmail = EmailSetting::where('key', 'admin_email')->value('value');
 
         if($adminEmail) {
             Mail::to($adminEmail)->send(new ContactMail($data));

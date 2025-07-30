@@ -33,5 +33,9 @@ class SiteSettingSeeder extends Seeder
             'name' => 'harita',
             'data'=> 'null',
         ]);
+        SiteSetting::Create(
+            ['name' => 'twitter_adres'],
+            ['data' => '@twitteradres']
+        );
     }
 }
