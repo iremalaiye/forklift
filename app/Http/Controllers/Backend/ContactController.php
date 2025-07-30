@@ -54,7 +54,7 @@ class ContactController extends Controller
     {
         // Get the latest contact messages with pagination
         $contacts = Contact::latest()->paginate(10);
-        return view('backend.pages.messages.index', compact('contacts'));
+        return view('backend.pages.contact.index', compact('contacts'));
     }
 
 
@@ -62,7 +62,7 @@ class ContactController extends Controller
     {
         // Find the contact message by ID or fail
         $contact = Contact::findOrFail($id);
-        return view('backend.pages.messages.show', compact('contact'));
+        return view('backend.pages.contact.show', compact('contact'));
     }
 
 
