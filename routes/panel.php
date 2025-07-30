@@ -6,7 +6,7 @@ use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ServiceController;
-use App\Http\Controllers\Backend\SiteSettingController;
+use App\Http\Controllers\Backend\ContactInformationController;
 use App\Http\Controllers\Backend\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,9 +59,9 @@ Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel',
 
 
 
-    Route::get('/sitesettings', [SiteSettingController::class, 'index'])->name('sitesetting.index');
-    Route::get('/sitesettings/edit', [SiteSettingController::class, 'edit'])->name('sitesetting.edit');
-    Route::post('/sitesettings', [SiteSettingController::class, 'update'])->name('sitesetting.update');
+    Route::get('/sitesettings', [ContactInformationController::class, 'index'])->name('contactinformation.index');
+    Route::get('/sitesettings/edit', [ContactInformationController::class, 'edit'])->name('contactinformation.edit');
+    Route::post('/sitesettings', [ContactInformationController::class, 'update'])->name('contactinformation.update');
 
 
 

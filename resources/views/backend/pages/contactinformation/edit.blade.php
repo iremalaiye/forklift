@@ -18,7 +18,7 @@
                         <div class="alert alert-success">{{ session('success') }}</div>
                     @endif
 
-                    <form action="{{ route('panel.sitesetting.update') }}" method="POST" class="forms-sample">
+                    <form action="{{ route('panel.contactinformation.update') }}" method="POST" class="forms-sample">
                         @csrf
 
                         <div class="form-group">

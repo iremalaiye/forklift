@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\SiteSetting;
+use App\Models\ContactInformation;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,27 +13,27 @@ class SiteSettingSeeder extends Seeder
      */
     public function run(): void
     {
-        SiteSetting::create([
+        ContactInformation::create([
             'name' => 'adres',
             'data'=> 'Kütahya, Türkiye',
         ]);
-        SiteSetting::create([
+        ContactInformation::create([
             'name' => 'phone',
             'data'=> '+90 543 722 16 44',
         ]);
-        SiteSetting::create([
+        ContactInformation::create([
             'name' => 'phone2',
             'data'=> '+90 540 313 43 43',
         ]);
-        SiteSetting::create([
+        ContactInformation::create([
             'name' => 'email',
             'data'=> 'info@forkliftkutahya.com',
         ]);
-        SiteSetting::create([
+        ContactInformation::create([
             'name' => 'harita',
             'data'=> 'null',
         ]);
-        SiteSetting::Create(
+        ContactInformation::Create(
             ['name' => 'twitter_adres'],
             ['data' => '@twitteradres']
         );

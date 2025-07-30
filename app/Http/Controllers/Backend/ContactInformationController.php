@@ -4,20 +4,20 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\SiteSetting;
-class SiteSettingController extends Controller
+use App\Models\ContactInformation;
+class ContactInformationController extends Controller
 {
     public function index()
     {
-        $settings = SiteSetting::pluck('data', 'name')->toArray();
-        return view('backend.pages.sitesetting.index', compact('settings'));
+        $settings = ContactInformation::pluck('data', 'name')->toArray();
+        return view('backend.pages.contactinformation.index', compact('settings'));
     }
 
     public function edit()
     {
 
-        $settings = SiteSetting::pluck('data','name')->toArray();
-        return view('backend.pages.sitesetting.edit', compact('settings'));
+        $settings = ContactInformation::pluck('data','name')->toArray();
+        return view('backend.pages.contactinformation.edit', compact('settings'));
     }
 
     public function update(Request $request)
@@ -27,7 +27,7 @@ class SiteSettingController extends Controller
 
 
         foreach($inputs as $key => $value) {
-            SiteSetting::updateOrCreate(
+            ContactInformation::updateOrCreate(
                 ['name' => $key],
                 ['data' => $value]
             );

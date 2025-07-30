@@ -15,7 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
             'subscribed' => EnsureUserIsSubscribed::class,
-             'sitesetting' => \App\Http\Middleware\SiteSettingMiddleware::class,
+             'contactinformation' => \App\Http\Middleware\SiteSettingMiddleware::class,
             'panelsetting' => \App\Http\Middleware\PanelSettingMiddleware::class,
             'admin' => \App\Http\Middleware\AdminMiddleware::class,
         ]);

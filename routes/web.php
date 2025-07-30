@@ -8,7 +8,7 @@ use App\Http\Controllers\Frontend\PageHomeController;
 use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/panel.php';
-Route::group(['middleware' => 'sitesetting'], function () {
+Route::group(['middleware' => 'contactinformation'], function () {
 
     Route::get('/', [PageHomeController::class,'anasayfa'] )->name('anasayfa');
     Route::get('/hakkimizda', [PageController::class,'hakkimizda'] )->name('hakkimizda');

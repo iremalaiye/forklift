@@ -56,7 +56,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('panel.sitesetting.index') }}">
+                    <a class="nav-link" href="{{ route('panel.contactinformation.index') }}">
                         <i class="fas fa-cogs" style="margin-right: 8px;"></i>
                         <span class="menu-title">İletişim Bilgileri</span>
                     </a>
