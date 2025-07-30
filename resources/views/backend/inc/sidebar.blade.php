@@ -39,7 +39,6 @@
 
 
 
-
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false" aria-controls="products">
                 <i class="icon-box menu-icon"></i>
@@ -53,6 +52,20 @@
                 </ul>
             </div>
         </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('panel.sitesetting.index') }}">
+                        <i class="fas fa-cogs" style="margin-right: 8px;"></i>
+                        <span class="menu-title">İletişim Bilgileri</span>
+                    </a>
+                </li>
+
+
+
+
+
 
 
     </ul>

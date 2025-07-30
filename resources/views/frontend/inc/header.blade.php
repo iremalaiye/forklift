@@ -23,7 +23,7 @@
                 <div class="col-6 col-md-4 order-3 order-md-3 text-right">
                     <div class="site-top-icons">
                         <ul>
-                            <span ></span> <li class="text-dark font-weight-bold"> +90 543 722 16 44 | +90 540 313 43 43</li><br>
+                            <span ></span> <li class="text-dark font-weight-bold"> {{ $settings['phone'] ?? '-' }} | {{ $settings['phone2'] ?? '-' }}</li><br>
 
                             <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
                         </ul>

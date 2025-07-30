@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\SiteSettingController;
 Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel','as'=>'panel.'], function () {
 
 
@@ -56,6 +57,9 @@ Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel',
 
 
 
+    Route::get('/sitesettings', [SiteSettingController::class, 'index'])->name('sitesetting.index');
+    Route::get('/sitesettings/edit', [SiteSettingController::class, 'edit'])->name('sitesetting.edit');
+    Route::post('/sitesettings', [SiteSettingController::class, 'update'])->name('sitesetting.update');
 
 
 

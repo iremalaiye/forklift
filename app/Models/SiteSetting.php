@@ -10,4 +10,5 @@ class SiteSetting extends Model
         'name',
         'data'
     ];
+    public $timestamps = true;
 }
