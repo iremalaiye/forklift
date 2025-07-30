@@ -1,13 +1,15 @@
 <?php
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Backend\SliderController;
-use App\Http\Controllers\Backend\ProductController;
+
 use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ServiceController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\SiteSettingController;
+use App\Http\Controllers\Backend\SliderController;
+use Illuminate\Support\Facades\Route;
+
 Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel','as'=>'panel.'], function () {
 
 

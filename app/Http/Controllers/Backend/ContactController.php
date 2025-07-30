@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
-use Illuminate\Http\Request;
-use App\Models\Contact;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\Controller;
 use App\Mail\ContactMail;
+use App\Models\Contact;
 use App\Models\EmailSetting;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 class ContactController extends Controller
 {
 

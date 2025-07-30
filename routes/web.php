@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Frontend\PageHomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontend\PageController;
-use \App\Http\Controllers\CustomAuthController;
-use App\Http\Controllers\AjaxController;
-use App\Http\Controllers\ContactController;
 
 require __DIR__.'/panel.php';
 Route::group(['middleware' => 'sitesetting'], function () {
