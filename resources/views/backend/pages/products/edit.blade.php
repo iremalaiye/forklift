@@ -97,19 +97,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="title">Seo Title</label>
+                            <label for="title">SEO Başlığı (Arama Motorlarında Görünecek Başlık)</label>
                             <input type="text" class="form-control" id="title" name="title" value="{{$product->title ?? ''}}" placeholder="Seo Title">
                         </div>
 
 
                         <div class="form-group">
-                            <label for="description">Seo Description</label>
+                            <label for="description">SEO Açıklaması (Sayfa içeriğinin kısa özeti)</label>
                             <input type="text" class="form-control" id="description" name="description" value="{{$product->description ?? ''}}" placeholder="Seo description">
                         </div>
 
 
                         <div class="form-group">
-                            <label for="keywords">Keywords</label>
+                            <label for="keywords">SEO Anahtar Kelimeler</label>
                             <input type="text" class="form-control" id="keywords" name="keywords" value="{{$product->keywords ?? ''}}" placeholder="Seo Keywords">
                         </div>
 

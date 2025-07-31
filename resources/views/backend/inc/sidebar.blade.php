@@ -40,6 +40,12 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('panel.contactlabels.index') }}">
+                <i class="fas fa-cogs" style="margin-right: 8px;"></i>
+                <span class="menu-title">İletişim Sayfası</span>
+            </a>
+        </li>
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('panel.contactinformation.index') }}">

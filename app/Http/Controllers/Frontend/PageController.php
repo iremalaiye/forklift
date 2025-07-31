@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Services;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\ContactLabel;
 class PageController extends Controller
 {
 
@@ -40,15 +41,15 @@ class PageController extends Controller
         $product = Product::whereSlug($slug)->firstOrFail();
 
         //seo
-        $title =  $product->title ?? $product->model . '-'.  config('app.name');
+        $title = $product->title ?: ($product->model . '-' . config('app.name'));
         $description = 'Bu güzel '.$product->model.' ürünü '.config('app.name'). 'dan hemen kiralayın';
         $seodesciption = $product->description ?? $description;
 
 
 
         $seo = [
-            'title' =>   $title ?? '',
-            'description' =>    $seodesciption,
+            'title' => $title ?? '',
+            'description' =>   $seodesciption?? '',
             'keywords' => $product->keywords ?? '',
             'image' => asset($product->image),
             'url'=>  route('urundetay',$product->slug),
@@ -103,8 +104,10 @@ class PageController extends Controller
             'robots' => 'index, follow',
         ];
 
+        $label = \App\Models\ContactLabel::first();
 
-        return view('frontend.pages.contact',compact('seo'));
+        return view('frontend.pages.contact', compact('seo', 'label'));
+
     }
 
 }

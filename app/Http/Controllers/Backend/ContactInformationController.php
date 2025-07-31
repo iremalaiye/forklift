@@ -33,6 +33,6 @@ class ContactInformationController extends Controller
             );
         }
 
-        return redirect()->back()->with('success', 'Ayarlar başarıyla güncellendi.');
+        return redirect()->route('panel.contactinformation.index')->with('success', 'İletişim bilgileri başarıyla güncellendi.');
     }
 }

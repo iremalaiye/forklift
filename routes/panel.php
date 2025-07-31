@@ -9,10 +9,8 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\ContactInformationController;
 use App\Http\Controllers\Backend\SliderController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Backend\ContactLabelController;
 Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel','as'=>'panel.'], function () {
-
-
 
     Route::get('/', [DashboardController::class,'index'] )->name('index');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -63,7 +61,9 @@ Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel',
     Route::get('/sitesettings/edit', [ContactInformationController::class, 'edit'])->name('contactinformation.edit');
     Route::post('/sitesettings', [ContactInformationController::class, 'update'])->name('contactinformation.update');
 
-
+    Route::get('/contact-labels', [ContactLabelController::class, 'index'])->name('contactlabels.index');
+    Route::get('/contact-labels/edit', [ContactLabelController::class, 'edit'])->name('contactlabels.edit');
+    Route::post('/contact-labels/update', [ContactLabelController::class, 'update'])->name('contactlabels.update');
 
 });
 

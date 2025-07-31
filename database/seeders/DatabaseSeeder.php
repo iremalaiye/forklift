@@ -24,10 +24,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SliderSeeder::class,
             AboutSeeder::class,
-            SiteSettingSeeder::class,
+            ContactInformationSeeder::class,
             ProductSeeder::class,
             ServicesSeeder::class,
-           PageSeoSeeder::class,
+            PageSeoSeeder::class,
+            ContactLabelSeeder::class,
             ]);
     }
 }

@@ -6,7 +6,7 @@ use App\Models\ContactInformation;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SiteSettingSeeder extends Seeder
+class ContactInformationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
