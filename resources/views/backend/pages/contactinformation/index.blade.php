@@ -7,7 +7,7 @@
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h4><i class="fas fa-cogs"></i> İletişim Bilgileri</h4>
             <a href="{{ route('panel.contactinformation.edit') }}" class="btn btn-sm btn-warning">
-                <i class="fas fa-edit"></i> İletişim Bilgilerini Düzenle
+                <i class="fas fa-edit"></i> Düzenle
             </a>
         </div>
 

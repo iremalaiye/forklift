@@ -7,19 +7,13 @@
                 <span class="menu-title">Dashboard</span>
             </a >
         </li>
+
+
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" href="{{route('panel.slider.index')}}">
                 <i class="icon-layout menu-icon"></i>
                 <span class="menu-title">Slayt</span>
-                <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('panel.slider.index')}}">Slayt İçeriği</a></li>
-
-
-                </ul>
-            </div>
         </li>
 
 
@@ -30,6 +24,7 @@
             </a>
         </li>
 
+
         <li class="nav-item">
             <a class="nav-link" href="{{route('panel.about.index')}}">
                 <i class="icon-grid menu-icon"></i>
@@ -38,34 +33,20 @@
         </li>
 
 
-
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false" aria-controls="products">
+            <a class="nav-link" href="{{ route('panel.products.index') }}">
                 <i class="icon-box menu-icon"></i>
                 <span class="menu-title">Ürünler</span>
-                <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="products">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('panel.products.index') }}">Ürün Listesi</a></li>
-
-                </ul>
-            </div>
         </li>
 
 
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('panel.contactinformation.index') }}">
-                        <i class="fas fa-cogs" style="margin-right: 8px;"></i>
-                        <span class="menu-title">İletişim Bilgileri</span>
-                    </a>
-                </li>
-
-
-
-
-
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('panel.contactinformation.index') }}">
+                <i class="fas fa-cogs" style="margin-right: 8px;"></i>
+                <span class="menu-title">İletişim Bilgileri</span>
+            </a>
+        </li>
 
 
     </ul>

@@ -20,7 +20,7 @@
                 <hr>
                 {{-- Edit button --}}
                 @if(!empty($about) && !empty($about->id))
-                    <a href="{{ route('panel.about.edit', $about->id) }}"class="btn btn-sm btn-warning mb-3">Düzenle</a>
+                 <a href="{{ route('panel.about.edit', $about->id) }}"class="btn btn-sm btn-warning mb-3">   <i class="fas fa-edit"></i> Düzenle</a>
                 @endif
             </div>
 
