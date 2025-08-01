@@ -9,18 +9,21 @@ cd forklift
 
 **2. Create and Configure Environment File**    
 
-cp .env.example .env
+cp .env.example .env  
 
-Open the .env file and update with your own settings:  
+To access PhpMyAdmin: http://localhost/phpmyadmin/  
+
+Open the .env file and update with your own settings:   
 
 APP_URL=http://localhost:8000  
+
 
 DB_CONNECTION=mysql  
 DB_HOST=127.0.0.1  
 DB_PORT=3306  
-DB_DATABASE=db2_forklift  
-DB_USERNAME=root  
-DB_PASSWORD=  
+DB_DATABASE=your_database_name   # ex: db2_forklift  
+DB_USERNAME=your_database_username   # ex: root  
+DB_PASSWORD=your_database_password   # can be left blank  
 
 **3.Install Dependencies**  
 
