@@ -5,7 +5,8 @@
 ```bash
 git clone https://github.com/iremalaiye/forklift.git
 cd forklift
-**2. Create and Configure Environment File**
+
+<strong>2. Create and Configure Environment File</strong>
 cp .env.example .env
 
 Open the .env file and update with your own settings:
