@@ -1,11 +1,11 @@
- Forklift Project Installation Guide
+ ##Forklift Project Installation Guide
 
- 1. Clone the Project 
+ #1. Clone the Project 
 
-bash
 git clone https://github.com/iremalaiye/forklift.git
 cd forklift
-##2. Create and Configure Environment File
+
+2. Create and Configure Environment File
 cp .env.example .env
 Open .env and update with your own settings:
 APP_URL=http://localhost:8000
