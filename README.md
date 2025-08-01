@@ -2,7 +2,7 @@
 
 **1. Clone the Project**
 
-```bash
+
 git clone https://github.com/iremalaiye/forklift.git
 cd forklift
 
