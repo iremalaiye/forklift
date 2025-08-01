@@ -10,11 +10,14 @@
 
                     <form action="{{ route('panel.email.save') }}" method="POST">
                         @csrf
-                        <label for="admin_email">Admin Mail Adresi</label>
+                        <label for="admin_email">Admin Mail Adresi:</label>
                         <input type="email" name="admin_email" id="admin_email" value="{{ old('admin_email', $adminEmail ?? '') }}" required>
                         <button type="submit">Kaydet</button>
                     </form>
 
+                    <a href="{{ route('panel.smtp_settings.edit') }}">
+                        <button type="button">SMTP Settings</button>
+                    </a><br> <br>
 
 
                 @if(session('success'))
@@ -26,6 +29,7 @@
 
 
                     <div class="table-responsive">
+                        <br>
                         <table class="table table-bordered">
                             <thead>
                             <tr>

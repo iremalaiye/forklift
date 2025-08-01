@@ -10,6 +10,8 @@ use App\Http\Controllers\Backend\ContactInformationController;
 use App\Http\Controllers\Backend\SliderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\ContactLabelController;
+use App\Http\Controllers\Backend\SmtpSettingController;
+use Illuminate\Support\Facades\Mail;
 Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel','as'=>'panel.'], function () {
 
     Route::get('/', [DashboardController::class,'index'] )->name('index');
@@ -65,5 +67,10 @@ Route::group(['middleware' => ['panelsetting','auth','admin'],'prefix'=>'panel',
     Route::get('/contact-labels/edit', [ContactLabelController::class, 'edit'])->name('contactlabels.edit');
     Route::post('/contact-labels/update', [ContactLabelController::class, 'update'])->name('contactlabels.update');
 
+
+
+
+    Route::get('/smtp-settings/edit', [SmtpSettingController::class, 'edit'])->name('smtp_settings.edit');
+    Route::post('/smtp-settings/update', [SmtpSettingController::class, 'update'])->name('smtp_settings.update');
 });
 
