@@ -1,6 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>  
 
-**Forklift Project  **
+**Forklift Project**
 
 A Laravel-based forklift management system.  
 Forklift Project is a dynamic company website with Laravel (PHP) featuring an admin panel to manage content such as homepage, about,products contact info, and messages.
@@ -13,7 +13,7 @@ Forklift Project is a dynamic company website with Laravel (PHP) featuring an ad
 
 XAMPP includes:PHP,MySQL,Apache Server,PhpMyAdmin  
 
-Install Laravel Installer (if not installed).  
+Install **Laravel Installer** (if not installed).  
 
 **2. Clone the Project**  
 
