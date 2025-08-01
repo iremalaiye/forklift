@@ -1,13 +1,21 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>  
 
-# Forklift Project 
+# 🚜 Forklift Project
+A Laravel-based forklift management system.
 
-**1. Clone the Project**  
+**1. Install XAMPP **
+- Download XAMPP
+- Start **Apache** and **MySQL** from the XAMPP Control Panel.
+- Access database: ( http://localhost/phpmyadmin/ )
+
+XAMPP includes:PHP,MySQL,Apache Server,PhpMyAdmin  
+
+**2. Clone the Project**  
 
 git clone https://github.com/iremalaiye/forklift.git  
 cd forklift
 
-**2. Create and Configure Environment File**    
+**3. Create and Configure Environment File**    
 
 cp .env.example .env  
 
@@ -27,22 +35,22 @@ To access PhpMyAdmin and manage your database, visit:
 http://localhost/phpmyadmin/
 
 
-**3.Install Dependencies**  
+**4.Install Dependencies**  
 
 composer install  
 npm install  
 npm run dev  
 
-**4. Generate Application Key**  
+**5. Generate Application Key**  
 
 php artisan key:generate  
 
-**5. Run Migrations and Seed Database**  
+**6. Run Migrations and Seed Database**  
 
 php artisan migrate  
 php artisan db:seed  
 
-**6. Serve the Application**  
+**7. Serve the Application**  
 
 php artisan serve
 
