@@ -13,7 +13,7 @@
 
 XAMPP includes:PHP,MySQL,Apache Server,PhpMyAdmin  
 
-Install **Laravel Installer** (if not installed).  
+- Install **Laravel Installer** (if not installed).  
 
 **2. Clone the Project**  
 
@@ -22,9 +22,9 @@ cd forklift
 
 **3. Create and Configure Environment File**    
 
-cp .env.example .env  
+- cp .env.example .env  
 
-Open the .env file and update with your own settings:   
+- Open the .env file and update with your own settings:   
 
 APP_URL=http://localhost:8000  
 
@@ -36,28 +36,28 @@ DB_DATABASE=your_database_name   # ex: db2_forklift
 DB_USERNAME=your_database_username   # ex: root  
 DB_PASSWORD=your_database_password   # can be left blank   
 
-To access PhpMyAdmin and manage your database, visit:
+- To access PhpMyAdmin and manage your database, visit:
 http://localhost/phpmyadmin/
 
 
 **4.Install Dependencies**  
 
-composer install  
-npm install  
-npm run dev  
+- composer install  
+- npm install  
+- npm run dev  
 
 **5. Generate Application Key**  
 
-php artisan key:generate  
+- php artisan key:generate  
 
 **6. Run Migrations and Seed Database**  
 
-php artisan migrate  
-php artisan db:seed  
+- php artisan migrate  
+- php artisan db:seed  
 
 **7. Serve the Application**  
 
-php artisan serve
+- php artisan serve
 
 
 
