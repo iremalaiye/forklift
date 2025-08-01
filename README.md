@@ -13,6 +13,8 @@ Forklift Project is a dynamic company website with Laravel (PHP) featuring an ad
 
 XAMPP includes:PHP,MySQL,Apache Server,PhpMyAdmin  
 
+Install Laravel Installer (if not installed).  
+
 **2. Clone the Project**  
 
 git clone https://github.com/iremalaiye/forklift.git  
