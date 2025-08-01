@@ -2,7 +2,7 @@
 
 **1. Clone the Project**  
 
-git clone https://github.com/iremalaiye/forklift.git
+git clone https://github.com/iremalaiye/forklift.git  
 cd forklift
 
 **2. Create and Configure Environment File**  
