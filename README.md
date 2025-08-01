@@ -1,7 +1,7 @@
 # Forklift Project Installation Guide
 
 **1. Clone the Project**
-
+<strong>1. Clone the Project</strong>
 ```bash
 git clone https://github.com/iremalaiye/forklift.git
 cd forklift
