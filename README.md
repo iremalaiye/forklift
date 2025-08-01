@@ -24,8 +24,8 @@ DB_PASSWORD=
 
 **3.Install Dependencies**  
 
-composer install
-npm install
+composer install  
+npm install  
 npm run dev  
 
 **4. Generate Application Key**  
