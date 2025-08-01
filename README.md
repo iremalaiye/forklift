@@ -11,8 +11,6 @@ cd forklift
 
 cp .env.example .env  
 
-To access PhpMyAdmin: http://localhost/phpmyadmin/  
-
 Open the .env file and update with your own settings:   
 
 APP_URL=http://localhost:8000  
@@ -23,7 +21,11 @@ DB_HOST=127.0.0.1
 DB_PORT=3306  
 DB_DATABASE=your_database_name   # ex: db2_forklift  
 DB_USERNAME=your_database_username   # ex: root  
-DB_PASSWORD=your_database_password   # can be left blank  
+DB_PASSWORD=your_database_password   # can be left blank   
+
+To access PhpMyAdmin and manage your database, visit:
+http://localhost/phpmyadmin/
+
 
 **3.Install Dependencies**  
 
