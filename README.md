@@ -5,6 +5,7 @@
 - A Laravel-based forklift management system.  
 - Forklift Project is a dynamic company website with Laravel (PHP) featuring an admin panel to manage content such as homepage, about,products contact info, and messages.
 
+**Installation and Setup Guide**  
 
 **1. Install XAMPP and Laravel**
 - Download XAMPP
