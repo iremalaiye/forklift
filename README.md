@@ -8,13 +8,14 @@ cd forklift
 **2. Create and Configure Environment File**  
 cp .env.example .env
 
-Open the .env file and update with your own settings:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=db2_forklift
-DB_USERNAME=root
-DB_PASSWORD=
+Open the .env file and update with your own settings:  
+
+DB_CONNECTION=mysql  
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=db2_forklift  
+DB_USERNAME=root  
+DB_PASSWORD=  
 
 **3.Install Dependencies**  
 composer install
