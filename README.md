@@ -17,8 +17,9 @@ XAMPP includes:PHP,MySQL,Apache Server,PhpMyAdmin
 
 **2. Clone the Project**  
 
-git clone https://github.com/iremalaiye/forklift.git  
-cd forklift
+- git clone https://github.com/iremalaiye/forklift.git  
+
+- cd forklift
 
 **3. Create and Configure Environment File**    
 
