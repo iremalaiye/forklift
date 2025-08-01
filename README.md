@@ -3,7 +3,7 @@
 # Forklift Project
 A Laravel-based forklift management system.
 
-**1. Install XAMPP **
+** 1. Install XAMPP **
 - Download XAMPP
 - Start **Apache** and **MySQL** from the XAMPP Control Panel.
 - Access database: ( http://localhost/phpmyadmin/ )
