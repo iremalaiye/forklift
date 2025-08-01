@@ -22,19 +22,23 @@ DB_DATABASE=db2_forklift
 DB_USERNAME=root  
 DB_PASSWORD=  
 
-**3.Install Dependencies**    
+**3.Install Dependencies**  
+
 composer install
 npm install
 npm run dev  
 
-**4. Generate Application Key**    
+**4. Generate Application Key**  
+
 php artisan key:generate  
 
 **5. Run Migrations and Seed Database**  
+
 php artisan migrate
 php artisan db:seed  
 
 **6. Serve the Application**  
+
 php artisan serve
 
 
