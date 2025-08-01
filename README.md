@@ -34,7 +34,7 @@ php artisan key:generate
 
 **5. Run Migrations and Seed Database**  
 
-php artisan migrate
+php artisan migrate  
 php artisan db:seed  
 
 **6. Serve the Application**  
