@@ -32,7 +32,7 @@ DB_DATABASE=your_database_name   # ex: db2_forklift
 DB_USERNAME=your_database_username   # ex: root  
 DB_PASSWORD=your_database_password   # can be left blank   
 
--To access PhpMyAdmin and manage your database, visit:
+To access PhpMyAdmin and manage your database, visit:
 http://localhost/phpmyadmin/
 
 
