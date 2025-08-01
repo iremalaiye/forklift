@@ -1,9 +1,9 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>  
 
-Forklift Project
+#Forklift Project
 A Laravel-based forklift management system.
 
-** 1. Install XAMPP **
+**1. Install XAMPP**
 - Download XAMPP
 - Start **Apache** and **MySQL** from the XAMPP Control Panel.
 - Access database: ( http://localhost/phpmyadmin/ )
