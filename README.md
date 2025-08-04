@@ -7,32 +7,31 @@
 
 **Installation and Setup Guide**  
 
-**1. Install XAMPP and Laravel**
-- Download XAMPP
+**1. Install XAMPP and Laravel (Option 1 - With XAMPP)**
+- Download XAMPP (Option 1 - With XAMPP)
 - Start **Apache** and **MySQL** from the XAMPP Control Panel.
 - Access database: ( http://localhost/phpmyadmin/ )
 
 XAMPP includes:PHP,MySQL,Apache Server,PhpMyAdmin  
 
 - Install **Laravel Installer** (if not installed).
-- 
-**1.a**
-Install Required Components Manually (Option 2 - Without XAMPP)
+
+**1.a Install Required Components Manually (Option 2 - Without XAMPP)**  
 If you don’t want to use XAMPP, you need to install the following components individually:
 
-- Apache Web Server (or Nginx as an alternative)
+- Apache Web Server 
 
-- PHP (>=8.0) – https://www.php.net/downloads
+- PHP (>=8.0) 
 
-- MySQL Server or MariaDB
+- MySQL Server 
 
-- PhpMyAdmin (Optional – for easier DB management)
+- PhpMyAdmin 
 
-- Composer 
+- Composer   
 
-- Node.js & NPM 
+- Node.js & NPM   
 
-- (Optional) Laravel Installer
+- (Optional) Laravel Installer  
 
 Laravel Installer is only necessary if you plan to create new Laravel projects using laravel new project-name.
 For existing projects like Forklift Project, you don’t need it, Composer will install everything required.
