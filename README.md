@@ -62,6 +62,8 @@ DB_PASSWORD=your_database_password   # can be left blank
 - To access PhpMyAdmin and manage your database, visit:
 http://localhost/phpmyadmin/
 
+- Email sending settings can be updated from the .env file or from the SMTP Settings page in the admin panel.  
+
 
 **4.Install Dependencies**  
 
