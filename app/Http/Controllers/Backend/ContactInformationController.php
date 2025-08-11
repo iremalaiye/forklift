@@ -26,11 +26,13 @@ class ContactInformationController extends Controller
         $inputs = $request->only(['phone', 'phone2', 'email', 'adres', 'harita']);
 
 
+
         foreach($inputs as $key => $value) {
             ContactInformation::updateOrCreate(
                 ['name' => $key],
                 ['data' => $value]
             );
+
         }
 
         return redirect()->route('panel.contactinformation.index')->with('success', 'İletişim bilgileri başarıyla güncellendi.');

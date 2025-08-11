@@ -31,11 +31,11 @@ class ContactInformationSeeder extends Seeder
         ]);
         ContactInformation::create([
             'name' => 'harita',
-            'data'=> 'null',
+            'data'=> null,
         ]);
-        ContactInformation::Create(
-            ['name' => 'twitter_adres'],
-            ['data' => '@twitteradres']
-        );
+        ContactInformation::create([
+            'name' => 'twitter_adres',
+            'data' => '@twitteradres'
+       ]);
     }
 }

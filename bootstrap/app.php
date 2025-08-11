@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use App\Http\Middleware\SiteSettingMiddleware;
+use App\Http\Middleware\ContactInformationMiddleware;
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
@@ -15,7 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
             'subscribed' => EnsureUserIsSubscribed::class,
-             'contactinformation' => \App\Http\Middleware\SiteSettingMiddleware::class,
+             'contactinformation' => \App\Http\Middleware\ContactInformationMiddleware::class,
             'panelsetting' => \App\Http\Middleware\PanelSettingMiddleware::class,
             'admin' => \App\Http\Middleware\AdminMiddleware::class,
         ]);

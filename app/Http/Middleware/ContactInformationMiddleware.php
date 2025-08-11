@@ -7,7 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class SiteSettingMiddleware
+class ContactInformationMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,6 +18,7 @@ class SiteSettingMiddleware
     {
         // Retrieve all site settings as a key-value array (name => data)
         $settings=ContactInformation::pluck('data','name')->toArray();
+
 
         // Share the settings with all views
         view()->share(['settings'=>$settings]);
